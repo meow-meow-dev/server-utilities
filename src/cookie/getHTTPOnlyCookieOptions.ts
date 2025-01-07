@@ -1,13 +1,17 @@
 import { CookieOptions } from "hono/utils/cookie";
 
-export function getHTTPOnlyCookieOptions(): CookieOptions {
-  const vitest = import.meta.env.VITEST !== undefined;
+type GetHTTPOnlyCookieOptionsProps = {
+  development: boolean;
+  vitest: boolean;
+};
 
-  const isDevelopment = import.meta.env.MODE === "development" || vitest;
-
+export function getHTTPOnlyCookieOptions({
+  development,
+  vitest,
+}: GetHTTPOnlyCookieOptionsProps): CookieOptions {
   return {
     httpOnly: !vitest,
-    sameSite: isDevelopment ? "lax" : "strict",
-    secure: !isDevelopment,
+    sameSite: development ? "lax" : "strict",
+    secure: !development,
   } as const;
 }
