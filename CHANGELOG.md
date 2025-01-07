@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.3...v1.0.4) (2025-01-07)
+
+
+### Bug Fixes
+
+* export cookies ([#9](https://github.com/meow-meow-dev/server-utilities/issues/9)) ([8bc78c6](https://github.com/meow-meow-dev/server-utilities/commit/8bc78c6a42a14dd7ef6c74370ed3a05fbe9b0e95))
+
 ## [1.0.3](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.2...v1.0.3) (2025-01-07)
 
 
