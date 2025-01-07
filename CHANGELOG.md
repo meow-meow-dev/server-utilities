@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.2...v1.0.3) (2025-01-07)
+
+
+### Bug Fixes
+
+* add updated pnpm.lock ([#7](https://github.com/meow-meow-dev/server-utilities/issues/7)) ([34cd506](https://github.com/meow-meow-dev/server-utilities/commit/34cd506582d3842a4037f7b4377e54788ff27788))
+
 ## [1.0.2](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.1...v1.0.2) (2025-01-07)
 
 
