@@ -4,6 +4,7 @@ export default defineConfig({
   clean: true,
   dts: true,
   entry: [
+    "http/cookie",
     "http/headers",
     "http/status",
     "http/search_params",
