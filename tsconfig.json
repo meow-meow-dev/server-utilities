@@ -1,0 +1,6 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "types": ["./src/_generated/wrangler.d.ts", "./src/vite-env.d.ts"]
+  }
+}
