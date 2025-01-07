@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.5...v1.0.6) (2025-01-07)
+
+
+### Bug Fixes
+
+* fix exports once again ([#13](https://github.com/meow-meow-dev/server-utilities/issues/13)) ([f1096c1](https://github.com/meow-meow-dev/server-utilities/commit/f1096c1ce875123b164a8e670a4a71b5c02260fb))
+
 ## [1.0.5](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.4...v1.0.5) (2025-01-07)
 
 
