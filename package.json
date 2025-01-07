@@ -1,0 +1,86 @@
+{
+  "name": "@meow-meow-dev/server-utilities",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Jérôme <jerome@meow-meow.dev>",
+  "type": "module",
+  "exports": {
+    "./http/headers": {
+      "import": {
+        "types": "./dist/http/headers/index.d.ts",
+        "default": "./dist/http/headers/index.mjs"
+      }
+    },
+    "./http/search_params": {
+      "import": {
+        "types": "./dist/http/search_params/index.d.ts",
+        "default": "./dist/http/search_params/index.mjs"
+      }
+    },
+    "./http/status": {
+      "import": {
+        "types": "./dist/http/status/index.d.ts",
+        "default": "./dist/http/status/index.mjs"
+      }
+    },
+    "./jwt": {
+      "import": {
+        "types": "./dist/jwt/index.d.ts",
+        "default": "./dist/jwt/index.mjs"
+      }
+    },
+    "./validation": {
+      "import": {
+        "types": "./dist/validation/index.d.ts",
+        "default": "./dist/validation/index.mjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "qa": "pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
+    "tsc:check": "tsc -noEmit",
+    "unit_tests": "pnpm vitest:run",
+    "vitest:run": "vitest run",
+    "vitest:watch": "vitest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@hono/oauth-providers": "^0.6.2",
+    "@hono/valibot-validator": "^0.5.1",
+    "@noxharmonium/kysely-d1": "^0.4.0",
+    "hono": "^4.6.16",
+    "kysely": "^0.27.5",
+    "valibot": "1.0.0-beta.11"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.6.0",
+    "@meow-meow-dev/shared-configs": "^1.4.5",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.10.5",
+    "commitizen": "^4.3.1",
+    "commitlint": "^19.6.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.17.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "wrangler": "^3.99.0"
+  },
+  "engines": {
+    "node": ">=17.5.0"
+  }
+}
