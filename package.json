@@ -7,122 +7,102 @@
   "author": "Jérôme <jerome@meow-meow.dev>",
   "type": "module",
   "exports": {
-    "./cookie": [
-      {
-        "import": {
-          "types": "./src/cookie/index.ts",
-          "default": "./src/cookie/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/cookie/index.d.ts",
-          "default": "./dist/cookie/index.mjs"
-        }
+    "./cookie": {
+      "import": {
+        "types": "./dist/cookie/index.d.ts",
+        "default": "./dist/cookie/index.mjs"
       }
-    ],
-    "./http/headers": [
-      {
-        "import": {
-          "types": "./src/http/headers/index.ts",
-          "default": "./src/http/headers/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/http/headers/index.d.ts",
-          "default": "./dist/http/headers/index.mjs"
-        }
+    },
+    "./http/headers": {
+      "import": {
+        "types": "./dist/http/headers/index.d.ts",
+        "default": "./dist/http/headers/index.mjs"
       }
-    ],
-    "./http/search_params": [
-      {
-        "import": {
-          "types": "./src/http/search_params/index.ts",
-          "default": [
-            "./src/http/search_params/index.ts"
-          ]
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/http/search_params/index.d.ts",
-          "default": [
-            "./dist/http/search_params/index.mjs"
-          ]
-        }
+    },
+    "./http/search_params": {
+      "import": {
+        "types": "./dist/http/search_params/index.d.ts",
+        "default": "./dist/http/search_params/index.mjs"
       }
-    ],
-    "./http/status": [
-      {
-        "import": {
-          "types": "./src/http/status/index.ts",
-          "default": "./src/http/status/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/http/status/index.d.ts",
-          "default": "./dist/http/status/index.mjs"
-        }
+    },
+    "./http/status": {
+      "import": {
+        "types": "./dist/http/status/index.d.ts",
+        "default": "./dist/http/status/index.mjs"
       }
-    ],
-    "./jwt": [
-      {
-        "import": {
-          "types": "./src/jwt/index.ts",
-          "default": "./src/jwt/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/jwt/index.d.ts",
-          "default": "./dist/jwt/index.mjs"
-        }
+    },
+    "./jwt": {
+      "import": {
+        "types": "./dist/jwt/index.d.ts",
+        "default": "./dist/jwt/index.mjs"
       }
-    ],
-    "./kysely": [
-      {
-        "import": {
-          "types": "./src/kysely/index.ts",
-          "default": "./src/kysely/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/kysely/index.d.ts",
-          "default": "./dist/kysely/index.mjs"
-        }
+    },
+    "./kysely": {
+      "import": {
+        "types": "./dist/kysely/index.d.ts",
+        "default": "./dist/kysely/index.mjs"
       }
-    ],
-    "./oauth_providers": [
-      {
-        "import": {
-          "types": "./src/oauth_providers/index.ts",
-          "default": "./src/oauth_providers/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/oauth_providers/index.d.ts",
-          "default": "./dist/oauth_providers/index.mjs"
-        }
+    },
+    "./oauth_providers": {
+      "import": {
+        "types": "./dist/oauth_providers/index.d.ts",
+        "default": "./dist/oauth_providers/index.mjs"
       }
-    ],
-    "./validation": [
-      {
-        "import": {
-          "types": "./src/validation/index.ts",
-          "default": "./src/validation/index.ts"
-        }
-      },
-      {
-        "import": {
-          "types": "./dist/validation/index.d.ts",
-          "default": "./dist/validation/index.mjs"
-        }
+    },
+    "./validation": {
+      "import": {
+        "types": "./dist/validation/index.d.ts",
+        "default": "./dist/validation/index.mjs"
       }
-    ]
+    },
+    "./~cookie": {
+      "import": {
+        "types": "./src/cookie/index.ts",
+        "default": "./src/cookie/index.ts"
+      }
+    },
+    "./~http/headers": {
+      "import": {
+        "types": "./src/http/headers/index.ts",
+        "default": "./src/http/headers/index.ts"
+      }
+    },
+    "./~http/search_params": {
+      "import": {
+        "types": "./src/http/search_params/index.ts",
+        "default": "./src/http/search_params/index.ts"
+      }
+    },
+    "./~http/status": {
+      "import": {
+        "types": "./src/http/status/index.ts",
+        "default": "./src/http/status/index.ts"
+      }
+    },
+    "./~jwt": {
+      "import": {
+        "types": "./src/jwt/index.ts",
+        "default": "./src/jwt/index.ts"
+      }
+    },
+    "./~kysely": {
+      "import": {
+        "types": "./src/kysely/index.ts",
+        "default": "./src/kysely/index.ts"
+      }
+    },
+    "./~oauth_providers": {
+      "import": {
+        "types": "./src/oauth_providers/index.ts",
+        "default": "./src/oauth_providers/index.ts"
+      }
+    },
+    "./~validation": {
+      "import": {
+        "types": "./src/validation/index.ts",
+        "default": "./src/validation/index.ts"
+      }
+    }
   },
   "files": [
     "dist"
@@ -135,7 +115,7 @@
     "prepublishOnly": "rm -rf ./package && clean-publish",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "qa": "pnpm build && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
+    "qa": "rm -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
     "tsc:check": "tsc -noEmit",
     "unit_tests": "pnpm vitest:run",
     "vitest:run": "vitest run",
