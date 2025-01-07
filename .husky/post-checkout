@@ -1,10 +1,10 @@
 #! /bin/sh
 
-# Configure husky
-pnpm husky
-
 # Install packages
 pnpm i
+
+# Configure husky
+pnpm husky
 
 # Build
 pnpm build
