@@ -38,13 +38,18 @@
       }
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
+    "postpublish": "rm -rf ./package",
+    "prepublishOnly": "rm -rf ./package && clean-publish",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "qa": "pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
+    "qa": "pnpm build && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
     "tsc:check": "tsc -noEmit",
     "unit_tests": "pnpm vitest:run",
     "vitest:run": "vitest run",
@@ -68,6 +73,7 @@
     "@meow-meow-dev/shared-configs": "^1.4.5",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.5",
+    "clean-publish": "^5.1.0",
     "commitizen": "^4.3.1",
     "commitlint": "^19.6.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -83,5 +89,12 @@
   "packageManager": "pnpm@9.14.2",
   "engines": {
     "node": ">=17.5.0"
+  },
+  "publishConfig": {
+    "directory": "package"
+  },
+  "clean-publish": {
+    "withoutPublish": true,
+    "tempDir": "package"
   }
 }
