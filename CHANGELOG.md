@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.6...v1.0.7) (2025-01-07)
+
+
+### Bug Fixes
+
+* don't use import.meta.env in getHTTPOnlyCookieOptions ([#15](https://github.com/meow-meow-dev/server-utilities/issues/15)) ([be7dcac](https://github.com/meow-meow-dev/server-utilities/commit/be7dcac60fd946dd65d1571d2c4e81bed2917b87))
+
 ## [1.0.6](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.5...v1.0.6) (2025-01-07)
 
 
