@@ -1,6 +1,6 @@
 import type { Context, Env, Input } from "hono";
 
-import { replaceSearchParams } from "@meow-meow-dev/server-utilities/http/search_params";
+import { replaceSearchParams } from "@meow-meow-dev/server-utilities/~http/search_params";
 
 export function buildRedirectURI<
   E extends Env,

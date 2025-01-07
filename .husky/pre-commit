@@ -1,1 +1,1 @@
-pnpm lint-staged && pnpm build && pnpm tsc:check && pnpm build && pnpm vitest:run
+rm -rf dist && pnpm lint-staged && pnpm tsc:check && pnpm vitest:run
