@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.0...v1.0.1) (2025-01-07)
+
+
+### Bug Fixes
+
+* add packageManager field to package.json ([#3](https://github.com/meow-meow-dev/server-utilities/issues/3)) ([451d262](https://github.com/meow-meow-dev/server-utilities/commit/451d262566f30fb7f28450218f944421f153bf58))
+
 ## 1.0.0 (2025-01-07)
 
 
