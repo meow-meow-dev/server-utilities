@@ -80,6 +80,7 @@
     "vitest": "^2.1.8",
     "wrangler": "^3.99.0"
   },
+  "packageManager": "pnpm@9.14.2",
   "engines": {
     "node": ">=17.5.0"
   }
