@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.4...v1.0.5) (2025-01-07)
+
+
+### Bug Fixes
+
+* add missing exports & export from src/ first ([#11](https://github.com/meow-meow-dev/server-utilities/issues/11)) ([1defb5c](https://github.com/meow-meow-dev/server-utilities/commit/1defb5c725ea72497f361d15a993e6b374911507))
+
 ## [1.0.4](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.3...v1.0.4) (2025-01-07)
 
 
