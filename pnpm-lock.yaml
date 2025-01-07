@@ -75,6 +75,7 @@ importers:
       wrangler:
         specifier: ^3.99.0
         version: 3.99.0
+    publishDirectory: package
 
 packages:
 
