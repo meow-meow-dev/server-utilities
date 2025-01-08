@@ -49,6 +49,12 @@
         "default": "./dist/oauth_providers/index.mjs"
       }
     },
+    "./test/matchers": {
+      "import": {
+        "types": "./dist/test/matchers/index.d.ts",
+        "default": "./dist/test/matchers/index.mjs"
+      }
+    },
     "./validation": {
       "import": {
         "types": "./dist/validation/index.d.ts",
@@ -95,6 +101,12 @@
       "import": {
         "types": "./src/oauth_providers/index.ts",
         "default": "./src/oauth_providers/index.ts"
+      }
+    },
+    "./~test/matchers": {
+      "import": {
+        "types": "./src/test/matchers/index.ts",
+        "default": "./src/test/matchers/index.ts"
       }
     },
     "./~validation": {
