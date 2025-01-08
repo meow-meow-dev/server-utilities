@@ -123,8 +123,8 @@
     "build": "tsup",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
-    "postpublish": "rm -rf ./package",
-    "prepublishOnly": "rm -rf ./package && clean-publish",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "qa": "rm -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
@@ -152,7 +152,7 @@
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.5",
     "@vitest/coverage-v8": "2.1.8",
-    "clean-publish": "^5.1.0",
+    "clean-package": "^2.2.0",
     "commitizen": "^4.3.1",
     "commitlint": "^19.6.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -168,12 +168,5 @@
   "packageManager": "pnpm@9.14.2",
   "engines": {
     "node": ">=17.5.0"
-  },
-  "publishConfig": {
-    "directory": "package"
-  },
-  "clean-publish": {
-    "withoutPublish": true,
-    "tempDir": "package"
   }
 }
