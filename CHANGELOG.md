@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.7...v1.1.0) (2025-01-08)
+
+
+### Features
+
+* add http status matchers ([#17](https://github.com/meow-meow-dev/server-utilities/issues/17)) ([0d20e25](https://github.com/meow-meow-dev/server-utilities/commit/0d20e25d6a5e0e10cbef7528adf4576fcfc692a2))
+
 ## [1.0.7](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.6...v1.0.7) (2025-01-07)
 
 
