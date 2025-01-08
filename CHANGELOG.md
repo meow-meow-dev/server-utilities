@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/meow-meow-dev/server-utilities/compare/v1.1.1...v1.1.2) (2025-01-08)
+
+
+### Bug Fixes
+
+* fix outdated lockfile ([#21](https://github.com/meow-meow-dev/server-utilities/issues/21)) ([e39ddcd](https://github.com/meow-meow-dev/server-utilities/commit/e39ddcdf59571f038b9e7067ac07098e1839602b))
+
 ## [1.1.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.1.0...v1.1.1) (2025-01-08)
 
 
