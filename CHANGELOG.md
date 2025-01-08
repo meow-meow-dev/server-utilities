@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.1.0...v1.1.1) (2025-01-08)
+
+
+### Bug Fixes
+
+* add dist/test to published package ([#19](https://github.com/meow-meow-dev/server-utilities/issues/19)) ([dccfce9](https://github.com/meow-meow-dev/server-utilities/commit/dccfce9b87dcfbe2fe662e0989d9260ff8a777d4))
+
 ## [1.1.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.0.7...v1.1.0) (2025-01-08)
 
 
