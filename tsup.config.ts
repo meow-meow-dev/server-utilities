@@ -11,6 +11,7 @@ export default defineConfig({
     "jwt",
     "kysely",
     "oauth_providers",
+    "test/matchers",
     "validation",
   ].map((folder) => `./src/${folder}/index.ts`),
   format: "esm",
