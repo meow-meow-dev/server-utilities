@@ -2,6 +2,7 @@ import { sign, verify } from "hono/jwt";
 import { JwtTokenExpired, JwtTokenNotBefore } from "hono/utils/jwt/types";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import { seconds } from "./duration.js";
 import { buildJWTPayloadTimestamps } from "./JWTPayloadTimestamps.js";
 
 const secret =
@@ -25,7 +26,7 @@ describe("buildJWTPayloadTimestamps", () => {
   it("correctly computes exp and nbf", ({ expect }) => {
     vi.setSystemTime(new Date(Date.UTC(2025, 1, 1)));
 
-    const timestamps = buildJWTPayloadTimestamps({ expiryInSeconds: 30 });
+    const timestamps = buildJWTPayloadTimestamps({ expiry: seconds(30) });
 
     expect(timestamps).toEqual({
       exp: 1_738_368_000 + 30,
@@ -37,7 +38,7 @@ describe("buildJWTPayloadTimestamps", () => {
   it("correctly rejects JWT based on timestamps", async ({ expect }) => {
     vi.setSystemTime(new Date(Date.UTC(2025, 1, 1)));
 
-    const timestamps = buildJWTPayloadTimestamps({ expiryInSeconds: 30 });
+    const timestamps = buildJWTPayloadTimestamps({ expiry: seconds(30) });
     const jwt = await sign({ ...payload, ...timestamps }, secret);
 
     vi.setSystemTime(new Date(Date.UTC(2025, 1, 1, 0, 0, 25)));
