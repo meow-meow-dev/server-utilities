@@ -7,6 +7,12 @@
   "author": "Jérôme <jerome@meow-meow.dev>",
   "type": "module",
   "exports": {
+    "./context": {
+      "import": {
+        "types": "./dist/context/index.d.ts",
+        "default": "./dist/context/index.mjs"
+      }
+    },
     "./cookie": {
       "import": {
         "types": "./dist/cookie/index.d.ts",
@@ -59,6 +65,12 @@
       "import": {
         "types": "./dist/validation/index.d.ts",
         "default": "./dist/validation/index.mjs"
+      }
+    },
+    "./~context": {
+      "import": {
+        "types": "./src/context/index.ts",
+        "default": "./src/context/index.ts"
       }
     },
     "./~cookie": {
@@ -144,6 +156,7 @@
     "@noxharmonium/kysely-d1": "^0.4.0",
     "hono": "^4.6.16",
     "kysely": "^0.27.5",
+    "type-fest": "^4.32.0",
     "valibot": "1.0.0-beta.11"
   },
   "devDependencies": {
