@@ -180,6 +180,6 @@
   },
   "packageManager": "pnpm@9.14.2",
   "engines": {
-    "node": ">=17.5.0"
+    "node": ">=22.0.0"
   }
 }
