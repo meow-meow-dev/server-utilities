@@ -1,29 +1,18 @@
-import {
-  integerSchema,
-  nonEmptyStringSchema,
-} from "@meow-meow-dev/server-utilities/~validation";
+import { nonEmptyStringSchema } from "@meow-meow-dev/server-utilities/~validation";
 import * as v from "valibot";
 
-export const jwtTimestampsSchema = v.strictObject({
-  exp: integerSchema,
-  iat: integerSchema,
-  nbf: integerSchema,
+import { jwtPayloadTimestampsSchema } from "./JWTPayloadTimestamps.js";
+
+export const accessTokenPayloadSchema = v.strictObject({
+  ...jwtPayloadTimestampsSchema.entries,
+  aud: v.pipe(v.array(v.pipe(v.string(), v.nonEmpty())), v.minLength(1)),
+  iss: nonEmptyStringSchema,
+  scope: nonEmptyStringSchema,
+  sub: nonEmptyStringSchema,
 });
 
-export type JWTTimestamps = v.InferOutput<typeof jwtTimestampsSchema>;
+export type AccessTokenPayload = v.InferOutput<typeof accessTokenPayloadSchema>;
 
-export const accessTokenPayloadSchema = v.pipe(
-  v.strictObject({
-    ...jwtTimestampsSchema.entries,
-    aud: v.pipe(v.array(v.pipe(v.string(), v.nonEmpty())), v.minLength(1)),
-    iss: nonEmptyStringSchema,
-    scope: nonEmptyStringSchema,
-    sub: v.pipe(v.string(), v.transform(Number)),
-  }),
-);
-
-export type AccessToken = v.InferOutput<typeof accessTokenPayloadSchema>;
-
-export function extractScopes({ scope }: AccessToken): string[] {
+export function extractScopes({ scope }: AccessTokenPayload): string[] {
   return scope.split(" ");
 }
