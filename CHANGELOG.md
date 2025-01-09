@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.2.0...v1.2.1) (2025-01-09)
+
+
+### Bug Fixes
+
+* fix compilation, stop hard-coding files list ([#25](https://github.com/meow-meow-dev/server-utilities/issues/25)) ([b1d6599](https://github.com/meow-meow-dev/server-utilities/commit/b1d6599abb5a0204e4076404b311a96d0c63177a))
+
 ## [1.2.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.1.2...v1.2.0) (2025-01-09)
 
 
