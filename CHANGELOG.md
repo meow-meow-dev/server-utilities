@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.0.1...v3.1.0) (2025-01-09)
+
+
+### Features
+
+* add helpers for durations & timestamps ([#42](https://github.com/meow-meow-dev/server-utilities/issues/42)) ([d001376](https://github.com/meow-meow-dev/server-utilities/commit/d001376fe89332d11ce25dd0c209e953f437f518))
+
 ## [3.0.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.0.0...v3.0.1) (2025-01-09)
 
 
