@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.3.1...v1.4.0) (2025-01-09)
+
+
+### Features
+
+* add HTTP matcher for 409 - Conflict ([#34](https://github.com/meow-meow-dev/server-utilities/issues/34)) ([c3a40ee](https://github.com/meow-meow-dev/server-utilities/commit/c3a40eee01fdfd423510ac7f34ec8a8f0a4418fb))
+
 ## [1.3.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.3.0...v1.3.1) (2025-01-09)
 
 
