@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.1.2...v1.2.0) (2025-01-09)
+
+
+### Features
+
+* add getEnvironmentVariable method in "/context" ([#23](https://github.com/meow-meow-dev/server-utilities/issues/23)) ([fb04327](https://github.com/meow-meow-dev/server-utilities/commit/fb043271fe11d1e87da2ed7272d6c6d489c266aa))
+
 ## [1.1.2](https://github.com/meow-meow-dev/server-utilities/compare/v1.1.1...v1.1.2) (2025-01-08)
 
 
