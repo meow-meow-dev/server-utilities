@@ -10,11 +10,11 @@ describe("getEnvironmentVariable", () => {
 
     const app = new Hono<{
       Bindings: {
+        ASSETS: () => Promise<unknown>;
         FORGOTTEN_VARIABLE: string | undefined;
         JWT_SECRET: string | undefined;
       };
     }>().get("/", (c) => {
-      console.log(c.env);
       expect(getEnvironmentVariable(c, "JWT_SECRET")).toEqual("secret");
       expect(() => getEnvironmentVariable(c, "FORGOTTEN_VARIABLE")).toThrow();
 
