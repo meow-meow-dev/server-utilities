@@ -1,4 +1,5 @@
 export * from "./badRequest.js";
+export * from "./conflict.js";
 export * from "./forbidden.js";
 export * from "./internalServerError.js";
 export * from "./notFound.js";
