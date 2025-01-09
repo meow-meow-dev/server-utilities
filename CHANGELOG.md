@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/meow-meow-dev/server-utilities/compare/v2.0.0...v3.0.0) (2025-01-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* add standard id token claims schemas, change access token's sub to string ([#38](https://github.com/meow-meow-dev/server-utilities/issues/38))
+
+### Features
+
+* add standard id token claims schemas, change access token's sub to string ([#38](https://github.com/meow-meow-dev/server-utilities/issues/38)) ([b9a1121](https://github.com/meow-meow-dev/server-utilities/commit/b9a112124033791f0c03bf188970fc98a104a2e8))
+
 ## [2.0.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.4.0...v2.0.0) (2025-01-09)
 
 
