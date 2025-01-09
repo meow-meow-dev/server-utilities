@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.3.0...v1.3.1) (2025-01-09)
+
+
+### Bug Fixes
+
+* **main:** trigger release ([10304d6](https://github.com/meow-meow-dev/server-utilities/commit/10304d6be2702391259710f7cc07d9161e93cfd9))
+
 ## [1.3.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.2.2...v1.3.0) (2025-01-09)
 
 
