@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/meow-meow-dev/server-utilities/compare/v1.2.1...v1.2.2) (2025-01-09)
+
+
+### Bug Fixes
+
+* fix declaration for getEnvironmentVariable ([#27](https://github.com/meow-meow-dev/server-utilities/issues/27)) ([394b7af](https://github.com/meow-meow-dev/server-utilities/commit/394b7af63107a6c5b9729ffe5acaeee1c0bd4eb3))
+
 ## [1.2.1](https://github.com/meow-meow-dev/server-utilities/compare/v1.2.0...v1.2.1) (2025-01-09)
 
 
