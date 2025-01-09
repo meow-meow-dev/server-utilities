@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.4.0...v2.0.0) (2025-01-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* add JWT timestamps & access tokens schema ([#36](https://github.com/meow-meow-dev/server-utilities/issues/36))
+
+### Features
+
+* add JWT timestamps & access tokens schema ([#36](https://github.com/meow-meow-dev/server-utilities/issues/36)) ([30f083a](https://github.com/meow-meow-dev/server-utilities/commit/30f083a86c5433cbf1b3d43456b3fd3ea8787777))
+
 ## [1.4.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.3.1...v1.4.0) (2025-01-09)
 
 
