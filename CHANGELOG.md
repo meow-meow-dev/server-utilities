@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.0.0...v3.0.1) (2025-01-09)
+
+
+### Bug Fixes
+
+* fix id token sub schema ([#40](https://github.com/meow-meow-dev/server-utilities/issues/40)) ([cc9f92c](https://github.com/meow-meow-dev/server-utilities/commit/cc9f92cfa58300f924ddf88bc9c1dc8d885c7b5c))
+
 ## [3.0.0](https://github.com/meow-meow-dev/server-utilities/compare/v2.0.0...v3.0.0) (2025-01-09)
 
 
