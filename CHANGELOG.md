@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/meow-meow-dev/server-utilities/compare/v1.2.2...v1.3.0) (2025-01-09)
+
+
+### Features
+
+* add http 409 Conflict ([#29](https://github.com/meow-meow-dev/server-utilities/issues/29)) ([689170b](https://github.com/meow-meow-dev/server-utilities/commit/689170b8dca4fe92ac8541403c75a306e7f54e70))
+
 ## [1.2.2](https://github.com/meow-meow-dev/server-utilities/compare/v1.2.1...v1.2.2) (2025-01-09)
 
 
