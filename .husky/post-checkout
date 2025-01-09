@@ -5,6 +5,3 @@ pnpm i
 
 # Configure husky
 pnpm husky
-
-# Build
-pnpm build

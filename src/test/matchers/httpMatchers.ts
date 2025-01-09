@@ -14,6 +14,9 @@ export function extendWithHTTPMatchers(expect: ExpectStatic): void {
     toBeHTTPBadRequest(received) {
       return toBeHTTPStatus(this, received, 400, "Bad Request");
     },
+    toBeHTTPConflict(received) {
+      return toBeHTTPStatus(this, received, 409, "Conflict");
+    },
     toBeHTTPNotFound(received) {
       return toBeHTTPStatus(this, received, 404, "Not Found");
     },

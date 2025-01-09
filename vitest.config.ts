@@ -2,6 +2,11 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    setupFiles: ["./src/test/setup/index.ts"],
+    coverage: {
+      exclude: ["src/**/index.ts", "src/**/*.test.ts"],
+      include: ["src/**/*.ts"],
+      provider: "istanbul",
+    },
+    setupFiles: ["src/test/setup/index.ts"],
   },
 });
