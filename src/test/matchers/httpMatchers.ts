@@ -1,5 +1,17 @@
 import type { ExpectStatic } from "vitest";
 
+export type ExpectedContent =
+  | {
+      json: unknown;
+    }
+  | {
+      text: string;
+    };
+
+export type HTTPMatcher<R = unknown> = (
+  expectedContent?: ExpectedContent,
+) => Promise<R>;
+
 type ExpectationResult = {
   // If you pass these, they will automatically appear inside a diff when
   // the matcher does not pass, so you don't need to print the diff yourself
@@ -11,29 +23,57 @@ type ExpectationResult = {
 
 export function extendWithHTTPMatchers(expect: ExpectStatic): void {
   expect.extend({
-    toBeHTTPBadRequest(received) {
-      return toBeHTTPStatus(this, received, 400, "Bad Request");
+    toBeHTTPBadRequest(received, expectedContent?: ExpectedContent) {
+      return toBeHTTPStatus(
+        this,
+        received,
+        400,
+        expectedContent ?? { text: "Bad Request" },
+      );
     },
-    toBeHTTPConflict(received) {
-      return toBeHTTPStatus(this, received, 409, "Conflict");
+    toBeHTTPConflict(received, expectedContent?: ExpectedContent) {
+      return toBeHTTPStatus(
+        this,
+        received,
+        409,
+        expectedContent ?? { text: "Conflict" },
+      );
     },
-    toBeHTTPNotFound(received) {
-      return toBeHTTPStatus(this, received, 404, "Not Found");
+    toBeHTTPNotFound(received, expectedContent?: ExpectedContent) {
+      return toBeHTTPStatus(
+        this,
+        received,
+        404,
+        expectedContent ?? { text: "Not Found" },
+      );
     },
-    toBeHTTPOk(received) {
-      return toBeHTTPStatus(this, received, 200, "OK");
+    toBeHTTPOk(received, expectedContent?: ExpectedContent) {
+      return toBeHTTPStatus(
+        this,
+        received,
+        200,
+        expectedContent ?? { text: "OK" },
+      );
     },
-    toBeHTTPUnauthorized(received) {
-      return toBeHTTPStatus(this, received, 401, "Unauthorized");
+    toBeHTTPUnauthorized(received, expectedContent?: ExpectedContent) {
+      return toBeHTTPStatus(
+        this,
+        received,
+        401,
+        expectedContent ?? { text: "Unauthorized" },
+      );
     },
   });
 }
 
 async function toBeHTTPStatus(
-  { isNot }: { isNot: boolean },
+  {
+    equals,
+    isNot,
+  }: { equals: (v1: unknown, v2: unknown) => boolean; isNot: boolean },
   received: unknown,
   expectedStatus: number,
-  expectedText: string,
+  expectedContent: ExpectedContent,
 ): Promise<ExpectationResult> {
   if (!(received instanceof Promise))
     return {
@@ -49,13 +89,38 @@ async function toBeHTTPStatus(
     };
 
   const { status } = response;
-  const text = await response.text();
+  const contentType = response.headers.get("Content-Type");
+  let expectedContentType, expectedContentValue;
+  const content = await (contentType?.startsWith("application/json")
+    ? response.json()
+    : response.text());
+
+  console.log({ content });
+
+  if ("text" in expectedContent) {
+    expectedContentValue = expectedContent.text;
+    expectedContentType = "text/plain";
+  } else {
+    expectedContentValue = expectedContent.json;
+    expectedContentType = "application/json";
+  }
+
+  let message: string | undefined;
+  if (!contentType?.startsWith(expectedContentType))
+    message = `Content type ${isNot ? "is" : "is not"} ${expectedContentType}`;
+  if (message === undefined && !equals(status, expectedStatus))
+    message = `Status ${isNot ? "is" : "is not"} ${expectedStatus.toString()}`;
+  if (message === undefined && !equals(content, expectedContentValue))
+    message = `Content ${isNot ? "is" : "is not"} ${typeof expectedContentValue === "string" ? expectedContentValue : "the expected one"}`;
 
   return {
-    actual: { status, text },
-    expected: { status: expectedStatus, text: expectedText },
-    message: (): string =>
-      `Response status ${isNot ? "is" : "is not"} ${expectedStatus.toString()} or response text isn't standard`,
-    pass: status === expectedStatus && text === expectedText,
+    actual: { content, contentType, status },
+    expected: {
+      content: expectedContentValue,
+      contentType: expectedContentType,
+      status: expectedStatus,
+    },
+    message: (): string => message ?? "",
+    pass: message === undefined,
   };
 }
