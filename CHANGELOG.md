@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.2.0...v3.3.0) (2025-01-10)
+
+
+### Features
+
+* add authentication helpers ([#46](https://github.com/meow-meow-dev/server-utilities/issues/46)) ([00f0cc8](https://github.com/meow-meow-dev/server-utilities/commit/00f0cc86c6acccb2724c97932cea2f7f10fdf0ff))
+
 ## [3.2.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.1.0...v3.2.0) (2025-01-10)
 
 
