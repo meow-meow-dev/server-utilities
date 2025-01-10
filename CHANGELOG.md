@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.1.0...v3.2.0) (2025-01-10)
+
+
+### Features
+
+* ability to specify an expected text or json content for http matchers ([#44](https://github.com/meow-meow-dev/server-utilities/issues/44)) ([74cb24f](https://github.com/meow-meow-dev/server-utilities/commit/74cb24f1803a0075e6d263006dd6e8a0d561f592))
+
 ## [3.1.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.0.1...v3.1.0) (2025-01-09)
 
 
