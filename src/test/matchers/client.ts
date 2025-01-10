@@ -5,8 +5,10 @@ import {
   ok,
   unauthorized,
 } from "@meow-meow-dev/server-utilities/~http/status";
+import { vValidator } from "@meow-meow-dev/server-utilities/~validation";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
+import * as v from "valibot";
 
 const app = new Hono()
   .get("/bad-request", (c) => {
@@ -23,6 +25,30 @@ const app = new Hono()
   })
   .get("/unauthorized", (c) => {
     return unauthorized(c);
-  });
+  })
+  .get(
+    "/json",
+    vValidator(
+      "query",
+      v.object({
+        status: v.pipe(
+          v.string(),
+          v.transform(Number),
+          v.union([
+            v.literal(200),
+            v.literal(400),
+            v.literal(401),
+            v.literal(404),
+            v.literal(409),
+          ]),
+        ),
+      }),
+    ),
+    (c) => {
+      const { status } = c.req.valid("query");
+
+      return c.json({ status }, status);
+    },
+  );
 
 export const client = testClient(app);

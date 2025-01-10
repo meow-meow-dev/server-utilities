@@ -1,12 +1,14 @@
 import "vitest";
 
+import type { HTTPMatcher } from "@meow-meow-dev/server-utils/~test/matchers";
+
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 interface CustomMatchers<R = unknown> {
-  toBeHTTPBadRequest: () => Promise<R>;
-  toBeHTTPConflict: () => Promise<R>;
-  toBeHTTPNotFound: () => Promise<R>;
-  toBeHTTPOk: () => Promise<R>;
-  toBeHTTPUnauthorized: () => Promise<R>;
+  toBeHTTPBadRequest: HTTPMatcher<R>;
+  toBeHTTPConflict: HTTPMatcher<R>;
+  toBeHTTPNotFound: HTTPMatcher<R>;
+  toBeHTTPOk: HTTPMatcher<R>;
+  toBeHTTPUnauthorized: HTTPMatcher<R>;
 }
 
 declare module "vitest" {
