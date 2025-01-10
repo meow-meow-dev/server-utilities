@@ -7,6 +7,12 @@
   "author": "Jérôme <jerome@meow-meow.dev>",
   "type": "module",
   "exports": {
+    "./auth": {
+      "import": {
+        "types": "./dist/auth/index.d.ts",
+        "default": "./dist/auth/index.mjs"
+      }
+    },
     "./context": {
       "import": {
         "types": "./dist/context/index.d.ts",
@@ -65,6 +71,12 @@
       "import": {
         "types": "./dist/validation/index.d.ts",
         "default": "./dist/validation/index.mjs"
+      }
+    },
+    "./~auth": {
+      "import": {
+        "types": "./src/auth/index.ts",
+        "default": "./src/auth/index.ts"
       }
     },
     "./~context": {
