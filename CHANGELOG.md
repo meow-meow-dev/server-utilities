@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.0...v3.3.1) (2025-01-10)
+
+
+### Bug Fixes
+
+* stop using import.meta.env to determine http-only cookies options ([#48](https://github.com/meow-meow-dev/server-utilities/issues/48)) ([4dd100e](https://github.com/meow-meow-dev/server-utilities/commit/4dd100e96291de5efa504e0c24ceabcc102a09d9))
+
 ## [3.3.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.2.0...v3.3.0) (2025-01-10)
 
 
