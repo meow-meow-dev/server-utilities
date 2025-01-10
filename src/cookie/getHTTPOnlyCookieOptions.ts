@@ -1,17 +1,15 @@
 import { CookieOptions } from "hono/utils/cookie";
 
-type GetHTTPOnlyCookieOptionsProps = {
-  development: boolean;
-  vitest: boolean;
-};
+export function getHTTPOnlyCookieOptions(): CookieOptions {
+  // eslint-disable-next-line n/no-process-env
+  const { MODE, VITEST } = process.env;
 
-export function getHTTPOnlyCookieOptions({
-  development,
-  vitest,
-}: GetHTTPOnlyCookieOptionsProps): CookieOptions {
+  const isDevelopment = MODE === "development";
+  const isVitest = VITEST !== undefined;
+
   return {
-    httpOnly: !vitest,
-    sameSite: development ? "lax" : "strict",
-    secure: !development,
+    httpOnly: !isVitest,
+    sameSite: isDevelopment ? "lax" : "strict",
+    secure: isDevelopment,
   } as const;
 }

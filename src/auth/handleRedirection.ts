@@ -1,7 +1,7 @@
 import type { Context, TypedResponse } from "hono";
 
+import { setHTTPOnlyCookie } from "@meow-meow-dev/server-utilities/~cookie";
 import { internalServerError } from "@meow-meow-dev/server-utilities/~http/status";
-import { setHTTPOnlyCookie } from "@meow-meow-dev/server-utilities/~jwt";
 
 import type { GenerateTokensReturn } from "./generateTokens.js";
 
