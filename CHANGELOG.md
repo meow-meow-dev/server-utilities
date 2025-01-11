@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.2](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.1...v3.3.2) (2025-01-11)
+
+
+### Bug Fixes
+
+* fix generated types ([#51](https://github.com/meow-meow-dev/server-utilities/issues/51)) ([30f5031](https://github.com/meow-meow-dev/server-utilities/commit/30f5031e361884f98c2cd6556ab3d211e5e0d316))
+
 ## [3.3.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.0...v3.3.1) (2025-01-10)
 
 
