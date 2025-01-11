@@ -7,8 +7,8 @@ const entry = globSync("./src/**/index.ts").filter(
 
 export default defineConfig({
   clean: true,
-  dts: true,
   entry,
+  experimentalDts: true,
   format: "esm",
   outExtension() {
     return {
