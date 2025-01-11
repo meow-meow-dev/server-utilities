@@ -4,3 +4,4 @@ pnpm-lock.yaml
 src/_generated/wrangler.d.ts
 .release-please-manifest.json
 CHANGELOG.md
+.tsup
