@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.3](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.2...v3.3.3) (2025-01-11)
+
+
+### Bug Fixes
+
+* export numericalIdSchema in /validation ([#54](https://github.com/meow-meow-dev/server-utilities/issues/54)) ([ba567d5](https://github.com/meow-meow-dev/server-utilities/commit/ba567d5b0f3c8ff5db95dbeac3548775df8f7863))
+
 ## [3.3.2](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.1...v3.3.2) (2025-01-11)
 
 
