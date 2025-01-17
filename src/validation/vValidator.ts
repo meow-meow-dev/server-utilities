@@ -10,6 +10,10 @@ import { vValidator as vValidatorBase } from "@hono/valibot-validator";
 
 type HasUndefined<T> = undefined extends T ? true : false;
 
+type VValidatorOptions = {
+  dumpErrors?: boolean;
+};
+
 export function vValidator<
   T extends
     | GenericSchema<unknown, unknown>
@@ -42,14 +46,20 @@ export function vValidator<
     out: Record<Target, Out>;
   },
   V extends I = I,
->(target: Target, schema: T): MiddlewareHandler<E, P, V> {
+>(
+  target: Target,
+  schema: T,
+  options?: VValidatorOptions,
+): MiddlewareHandler<E, P, V> {
   return vValidatorBase<T, Target, E, P, In, Out, I, V>(
     target,
     schema,
     (result, c) => {
       if (!result.success) {
-        console.error(JSON.stringify(result.issues, null, 2));
-        console.error(result.output);
+        if (options?.dumpErrors) {
+          console.error(JSON.stringify(result.issues, null, 2));
+          console.error(result.output);
+        }
 
         return c.text("Bad Request", 400);
       }

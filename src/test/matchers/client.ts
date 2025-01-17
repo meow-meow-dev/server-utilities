@@ -1,6 +1,7 @@
 import {
   badRequest,
   conflict,
+  forbidden,
   notFound,
   ok,
   unauthorized,
@@ -16,6 +17,9 @@ const app = new Hono()
   })
   .get("/conflict", (c) => {
     return conflict(c);
+  })
+  .get("/forbidden", (c) => {
+    return forbidden(c);
   })
   .get("/not-found", (c) => {
     return notFound(c);
@@ -38,6 +42,7 @@ const app = new Hono()
             v.literal(200),
             v.literal(400),
             v.literal(401),
+            v.literal(403),
             v.literal(404),
             v.literal(409),
           ]),
