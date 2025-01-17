@@ -1,6 +1,7 @@
 import type { ExpectStatic } from "vitest";
 
 export type ExpectedContent =
+  | string
   | {
       json: unknown;
     }
@@ -28,15 +29,18 @@ export function extendWithHTTPMatchers(expect: ExpectStatic): void {
         this,
         received,
         400,
-        expectedContent ?? { text: "Bad Request" },
+        expectedContent ?? "Bad Request",
       );
     },
     toBeHTTPConflict(received, expectedContent?: ExpectedContent) {
+      return toBeHTTPStatus(this, received, 409, expectedContent ?? "Conflict");
+    },
+    toBeHTTPForbidden(received, expectedContent?: ExpectedContent) {
       return toBeHTTPStatus(
         this,
         received,
-        409,
-        expectedContent ?? { text: "Conflict" },
+        403,
+        expectedContent ?? "Forbidden",
       );
     },
     toBeHTTPNotFound(received, expectedContent?: ExpectedContent) {
@@ -44,23 +48,18 @@ export function extendWithHTTPMatchers(expect: ExpectStatic): void {
         this,
         received,
         404,
-        expectedContent ?? { text: "Not Found" },
+        expectedContent ?? "Not Found",
       );
     },
     toBeHTTPOk(received, expectedContent?: ExpectedContent) {
-      return toBeHTTPStatus(
-        this,
-        received,
-        200,
-        expectedContent ?? { text: "OK" },
-      );
+      return toBeHTTPStatus(this, received, 200, expectedContent ?? "OK");
     },
     toBeHTTPUnauthorized(received, expectedContent?: ExpectedContent) {
       return toBeHTTPStatus(
         this,
         received,
         401,
-        expectedContent ?? { text: "Unauthorized" },
+        expectedContent ?? "Unauthorized",
       );
     },
   });
@@ -95,10 +94,11 @@ async function toBeHTTPStatus(
     ? response.json()
     : response.text());
 
-  console.log({ content });
-
-  if ("text" in expectedContent) {
-    expectedContentValue = expectedContent.text;
+  if (typeof expectedContent === "string" || "text" in expectedContent) {
+    expectedContentValue =
+      typeof expectedContent === "string"
+        ? expectedContent
+        : expectedContent.text;
     expectedContentType = "text/plain";
   } else {
     expectedContentValue = expectedContent.json;
