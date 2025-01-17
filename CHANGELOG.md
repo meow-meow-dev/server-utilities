@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.3...v3.4.0) (2025-01-17)
+
+
+### Features
+
+* add forgotten matchers, write doc ([#56](https://github.com/meow-meow-dev/server-utilities/issues/56)) ([41f88fa](https://github.com/meow-meow-dev/server-utilities/commit/41f88fa077093af3991deb9390c4eef1136e518f))
+
 ## [3.3.3](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.2...v3.3.3) (2025-01-11)
 
 
