@@ -1,3 +1,5 @@
+import type { D1Database } from "@cloudflare/workers-types";
+
 import { D1Dialect } from "@noxharmonium/kysely-d1";
 import { CamelCasePlugin, Kysely } from "kysely";
 
