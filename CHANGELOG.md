@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.4.0...v3.5.0) (2025-02-12)
+
+
+### Features
+
+* improve matchers ergonomics ([#59](https://github.com/meow-meow-dev/server-utilities/issues/59)) ([f46a404](https://github.com/meow-meow-dev/server-utilities/commit/f46a404549cfb6dbd3976353309e2c7afd47be3c))
+
 ## [3.4.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.3.3...v3.4.0) (2025-01-17)
 
 
