@@ -1,16 +1,7 @@
 import type { ExpectStatic } from "vitest";
 
-export type ExpectedContent =
-  | string
-  | {
-      json: unknown;
-    }
-  | {
-      text: string;
-    };
-
 export type HTTPMatcher<R = unknown> = (
-  expectedContent?: ExpectedContent,
+  expectedContent?: unknown,
 ) => Promise<R>;
 
 type ExpectationResult = {
@@ -24,7 +15,7 @@ type ExpectationResult = {
 
 export function extendWithHTTPMatchers(expect: ExpectStatic): void {
   expect.extend({
-    toBeHTTPBadRequest(received, expectedContent?: ExpectedContent) {
+    toBeHTTPBadRequest(received, expectedContent?: unknown) {
       return toBeHTTPStatus(
         this,
         received,
@@ -32,10 +23,10 @@ export function extendWithHTTPMatchers(expect: ExpectStatic): void {
         expectedContent ?? "Bad Request",
       );
     },
-    toBeHTTPConflict(received, expectedContent?: ExpectedContent) {
+    toBeHTTPConflict(received, expectedContent?: unknown) {
       return toBeHTTPStatus(this, received, 409, expectedContent ?? "Conflict");
     },
-    toBeHTTPForbidden(received, expectedContent?: ExpectedContent) {
+    toBeHTTPForbidden(received, expectedContent?: unknown) {
       return toBeHTTPStatus(
         this,
         received,
@@ -43,7 +34,7 @@ export function extendWithHTTPMatchers(expect: ExpectStatic): void {
         expectedContent ?? "Forbidden",
       );
     },
-    toBeHTTPNotFound(received, expectedContent?: ExpectedContent) {
+    toBeHTTPNotFound(received, expectedContent?: unknown) {
       return toBeHTTPStatus(
         this,
         received,
@@ -51,10 +42,10 @@ export function extendWithHTTPMatchers(expect: ExpectStatic): void {
         expectedContent ?? "Not Found",
       );
     },
-    toBeHTTPOk(received, expectedContent?: ExpectedContent) {
+    toBeHTTPOk(received, expectedContent?: unknown) {
       return toBeHTTPStatus(this, received, 200, expectedContent ?? "OK");
     },
-    toBeHTTPUnauthorized(received, expectedContent?: ExpectedContent) {
+    toBeHTTPUnauthorized(received, expectedContent?: unknown) {
       return toBeHTTPStatus(
         this,
         received,
@@ -72,7 +63,7 @@ async function toBeHTTPStatus(
   }: { equals: (v1: unknown, v2: unknown) => boolean; isNot: boolean },
   received: unknown,
   expectedStatus: number,
-  expectedContent: ExpectedContent,
+  expectedContent: unknown,
 ): Promise<ExpectationResult> {
   if (!(received instanceof Promise))
     return {
@@ -89,34 +80,25 @@ async function toBeHTTPStatus(
 
   const { status } = response;
   const contentType = response.headers.get("Content-Type");
-  let expectedContentType, expectedContentValue;
   const content = await (contentType?.startsWith("application/json")
     ? response.json()
     : response.text());
 
-  if (typeof expectedContent === "string" || "text" in expectedContent) {
-    expectedContentValue =
-      typeof expectedContent === "string"
-        ? expectedContent
-        : expectedContent.text;
-    expectedContentType = "text/plain";
-  } else {
-    expectedContentValue = expectedContent.json;
-    expectedContentType = "application/json";
-  }
+  const expectedContentType =
+    typeof expectedContent === "string" ? "text/plain" : "application/json";
 
   let message: string | undefined;
   if (!contentType?.startsWith(expectedContentType))
     message = `Content type ${isNot ? "is" : "is not"} ${expectedContentType}`;
   if (message === undefined && !equals(status, expectedStatus))
     message = `Status ${isNot ? "is" : "is not"} ${expectedStatus.toString()}`;
-  if (message === undefined && !equals(content, expectedContentValue))
-    message = `Content ${isNot ? "is" : "is not"} ${typeof expectedContentValue === "string" ? expectedContentValue : "the expected one"}`;
+  if (message === undefined && !equals(content, expectedContent))
+    message = `Content ${isNot ? "is" : "is not"} ${typeof expectedContent === "string" ? expectedContent : "the expected one"}`;
 
   return {
     actual: { content, contentType, status },
     expected: {
-      content: expectedContentValue,
+      content: expectedContent,
       contentType: expectedContentType,
       status: expectedStatus,
     },
