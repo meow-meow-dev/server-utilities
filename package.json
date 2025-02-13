@@ -55,6 +55,12 @@
         "default": "./dist/kysely/index.mjs"
       }
     },
+    "./neverthrow": {
+      "import": {
+        "types": "./dist/neverthrow/index.d.ts",
+        "default": "./dist/neverthrow/index.mjs"
+      }
+    },
     "./oauth_providers": {
       "import": {
         "types": "./dist/oauth_providers/index.d.ts",
@@ -133,6 +139,12 @@
         "default": "./src/test/matchers/index.ts"
       }
     },
+    "./~test/matchers/types": {
+      "import": {
+        "types": "./src/test/matchers/types/index.ts",
+        "default": "./src/test/matchers/types/index.ts"
+      }
+    },
     "./~validation": {
       "import": {
         "types": "./src/validation/index.ts",
@@ -168,6 +180,7 @@
     "@noxharmonium/kysely-d1": "^0.4.0",
     "hono": "^4.7.0",
     "kysely": "^0.27.5",
+    "neverthrow": "^8.1.1",
     "type-fest": "^4.34.1",
     "valibot": "1.0.0-rc.0"
   },

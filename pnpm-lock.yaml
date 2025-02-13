@@ -23,6 +23,9 @@ importers:
       kysely:
         specifier: ^0.27.5
         version: 0.27.5
+      neverthrow:
+        specifier: ^8.1.1
+        version: 8.1.1
       type-fest:
         specifier: ^4.34.1
         version: 4.34.1
@@ -2316,6 +2319,10 @@ packages:
 
   natural-orderby@5.0.0:
     resolution: {integrity: sha512-kKHJhxwpR/Okycz4HhQKKlhWe4ASEfPgkSWNmKFHd7+ezuQlxkA5cM3+XkBPvm1gmHen3w53qsYAv+8GwRrBlg==}
+    engines: {node: '>=18'}
+
+  neverthrow@8.1.1:
+    resolution: {integrity: sha512-DpbZ/UDI0B+TxJB1JysXSfi1++3YK2xLBqQLTlRN0b4zxlZ2MoiB+dKKV8dMRzt1fAFjRKDknXOVJgpl+a4Amw==}
     engines: {node: '>=18'}
 
   node-releases@2.0.19:
@@ -5758,6 +5765,10 @@ snapshots:
   natural-compare@1.4.0: {}
 
   natural-orderby@5.0.0: {}
+
+  neverthrow@8.1.1:
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu': 4.34.6
 
   node-releases@2.0.19: {}
 

@@ -1,1 +1,2 @@
-export * from "./httpMatchers.js";
+export * from "./extendMatchers.js";
+export * from "./http/HTTPMatcher.js";
