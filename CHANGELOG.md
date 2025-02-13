@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.0...v3.5.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* fix release please ([a622833](https://github.com/meow-meow-dev/server-utilities/commit/a622833194e83e89fc506e6b1949b17e803bb2e1))
+
 ## [3.5.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.4.0...v3.5.0) (2025-02-12)
 
 
