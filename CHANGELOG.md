@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.2](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.1...v3.5.2) (2025-02-13)
+
+
+### Bug Fixes
+
+* fix qa script by running generate_code first ([#64](https://github.com/meow-meow-dev/server-utilities/issues/64)) ([1b20613](https://github.com/meow-meow-dev/server-utilities/commit/1b206130b3615dce64541eda3d78c3e2131507df))
+
 ## [3.5.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.0...v3.5.1) (2025-02-13)
 
 
