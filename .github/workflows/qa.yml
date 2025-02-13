@@ -39,7 +39,7 @@ jobs:
         run: pnpm install
 
       - name: Generate code
-        run: pnpm turbo run generate_code
+        run: pnpm generate_code
 
       - name: Run lint
         run: pnpm lint:check
