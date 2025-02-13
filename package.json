@@ -55,6 +55,12 @@
         "default": "./dist/kysely/index.mjs"
       }
     },
+    "./neverthrow": {
+      "import": {
+        "types": "./dist/neverthrow/index.d.ts",
+        "default": "./dist/neverthrow/index.mjs"
+      }
+    },
     "./oauth_providers": {
       "import": {
         "types": "./dist/oauth_providers/index.d.ts",
@@ -133,6 +139,12 @@
         "default": "./src/test/matchers/index.ts"
       }
     },
+    "./~test/matchers/types": {
+      "import": {
+        "types": "./src/test/matchers/types/index.ts",
+        "default": "./src/test/matchers/types/index.ts"
+      }
+    },
     "./~validation": {
       "import": {
         "types": "./src/validation/index.ts",
@@ -145,6 +157,7 @@
   ],
   "scripts": {
     "build": "tsup",
+    "generate_code": "pnpm wrangler:generate_types",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
     "postpack": "clean-package restore",
@@ -155,7 +168,8 @@
     "tsc:check": "tsc -noEmit",
     "unit_tests": "pnpm vitest:run",
     "vitest:run": "vitest run",
-    "vitest:watch": "vitest"
+    "vitest:watch": "vitest",
+    "wrangler:generate_types": "pnpm wrangler types --experimental-include-runtime=./src/_generated/wrangler.d.ts && rm -f worker-configuration.d.ts"
   },
   "config": {
     "commitizen": {
@@ -168,17 +182,17 @@
     "@noxharmonium/kysely-d1": "^0.4.0",
     "hono": "^4.7.0",
     "kysely": "^0.27.5",
+    "neverthrow": "^8.1.1",
     "type-fest": "^4.34.1",
     "valibot": "1.0.0-rc.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250204.0",
     "@commitlint/config-conventional": "^19.7.1",
     "@meow-meow-dev/shared-configs": "^1.4.7",
     "@microsoft/api-extractor": "^7.49.2",
     "@tsconfig/node22": "^22.0.0",
-    "@vitest/coverage-istanbul": "^3.0.5",
-    "@vitest/coverage-v8": "3.0.5",
+    "@vitest/coverage-istanbul": "^2.1.9",
+    "@vitest/ui": "^2.1.9",
     "clean-package": "^2.2.0",
     "commitizen": "^4.3.1",
     "commitlint": "^19.7.1",
@@ -189,10 +203,18 @@
     "prettier": "^3.5.0",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3",
-    "vitest": "^3.0.5"
+    "vitest": "^2.1.8",
+    "wrangler": "^3.108.1"
   },
   "packageManager": "pnpm@10.2.1",
   "engines": {
     "node": ">=22.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
   }
 }

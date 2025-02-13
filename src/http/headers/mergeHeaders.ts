@@ -1,5 +1,3 @@
-import type { HeadersInit } from "@cloudflare/workers-types";
-
 export function mergeHeaders(
   currentHeader: HeadersInit,
   addedFields: Record<string, string>,

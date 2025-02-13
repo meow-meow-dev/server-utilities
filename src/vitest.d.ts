@@ -10,6 +10,9 @@ interface CustomMatchers<R = unknown> {
   toBeHTTPNotFound: HTTPMatcher<R>;
   toBeHTTPOk: HTTPMatcher<R>;
   toBeHTTPUnauthorized: HTTPMatcher<R>;
+
+  toBeNeverthrowErr: HTTPMatcher<R>;
+  toBeNeverthrowOk: HTTPMatcher<R>;
 }
 
 declare module "vitest" {

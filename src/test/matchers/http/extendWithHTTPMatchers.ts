@@ -1,17 +1,5 @@
+import type { ExpectationResult } from "@meow-meow-dev/server-utilities/~test/matchers/types";
 import type { ExpectStatic } from "vitest";
-
-export type HTTPMatcher<R = unknown> = (
-  expectedContent?: unknown,
-) => Promise<R>;
-
-type ExpectationResult = {
-  // If you pass these, they will automatically appear inside a diff when
-  // the matcher does not pass, so you don't need to print the diff yourself
-  actual?: unknown;
-  expected?: unknown;
-  message: () => string;
-  pass: boolean;
-};
 
 export function extendWithHTTPMatchers(expect: ExpectStatic): void {
   expect.extend({
