@@ -164,7 +164,7 @@
     "prepack": "clean-package",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "qa": "rm -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
+    "qa": "pnpm generate_code && -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
     "tsc:check": "tsc -noEmit",
     "unit_tests": "pnpm vitest:run",
     "vitest:run": "vitest run",
