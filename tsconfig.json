@@ -2,6 +2,10 @@
   "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
     "rootDir": ".",
-    "types": ["./src/vite-env.d.ts", "./src/vitest.d.ts"]
+    "types": [
+      "./src/vite-env.d.ts",
+      "./src/vitest.d.ts",
+      "./src/_generated/wrangler.d.ts"
+    ]
   }
 }
