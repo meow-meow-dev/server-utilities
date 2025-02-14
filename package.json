@@ -164,7 +164,7 @@
     "prepack": "clean-package",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "qa": "pnpm generate_code && -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
+    "qa": "pnpm generate_code && rm -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
     "tsc:check": "tsc -noEmit",
     "unit_tests": "pnpm vitest:run",
     "vitest:run": "vitest run",
@@ -175,16 +175,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@hono/oauth-providers": "^0.6.2",
-    "@hono/valibot-validator": "^0.5.2",
-    "@noxharmonium/kysely-d1": "^0.4.0",
-    "hono": "^4.7.1",
-    "kysely": "^0.27.5",
-    "neverthrow": "^8.1.1",
-    "type-fest": "^4.34.1",
-    "valibot": "1.0.0-rc.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.7.1",
@@ -205,6 +195,16 @@
     "typescript": "^5.7.3",
     "vitest": "^2.1.8",
     "wrangler": "^3.108.1"
+  },
+  "peerDependencies": {
+    "@hono/oauth-providers": "^0.6.2",
+    "@hono/valibot-validator": "^0.5.2",
+    "@noxharmonium/kysely-d1": "^0.4.0",
+    "hono": "^4.7.1",
+    "kysely": "^0.27.5",
+    "neverthrow": "^8.1.1",
+    "type-fest": "^4.34.1",
+    "valibot": "1.0.0-rc.0"
   },
   "packageManager": "pnpm@10.2.1",
   "engines": {
