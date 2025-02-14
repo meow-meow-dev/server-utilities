@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.3](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.2...v3.5.3) (2025-02-14)
+
+
+### Bug Fixes
+
+* switch to peer dependencies, fix qascript ([#66](https://github.com/meow-meow-dev/server-utilities/issues/66)) ([60a4c9b](https://github.com/meow-meow-dev/server-utilities/commit/60a4c9bce684bf9e25aab93975c9b958bbd57677))
+
 ## [3.5.2](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.1...v3.5.2) (2025-02-13)
 
 
