@@ -3,13 +3,13 @@ import type { MiddlewareHandler } from "hono";
 import {
   forbidden,
   unauthorized,
-} from "@meow-meow-dev/server-utilities/~http/status";
-import { type AccessTokenPayload } from "@meow-meow-dev/server-utilities/~jwt";
+} from "@meow-meow-dev/server-utilities/http/status";
+import { type AccessTokenPayload } from "@meow-meow-dev/server-utilities/jwt";
 import {
   accessTokenPayloadSchema,
   extractJWTPayload,
   extractScopes,
-} from "@meow-meow-dev/server-utilities/~jwt";
+} from "@meow-meow-dev/server-utilities/jwt";
 import { getCookie } from "hono/cookie";
 import { createMiddleware } from "hono/factory";
 

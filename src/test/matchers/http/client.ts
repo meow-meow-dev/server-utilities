@@ -5,8 +5,8 @@ import {
   notFound,
   ok,
   unauthorized,
-} from "@meow-meow-dev/server-utilities/~http/status";
-import { vValidator } from "@meow-meow-dev/server-utilities/~validation";
+} from "@meow-meow-dev/server-utilities/http/status";
+import { vValidator } from "@meow-meow-dev/server-utilities/validation";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import * as v from "valibot";

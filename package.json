@@ -8,147 +8,153 @@
   "type": "module",
   "exports": {
     "./auth": {
+      "development": {
+        "types": "./src/auth/index.ts",
+        "default": "./src/auth/index.ts"
+      },
       "import": {
         "types": "./dist/auth/index.d.ts",
         "default": "./dist/auth/index.mjs"
       }
     },
     "./context": {
+      "development": {
+        "types": "./src/context/index.ts",
+        "default": "./src/context/index.ts"
+      },
       "import": {
         "types": "./dist/context/index.d.ts",
         "default": "./dist/context/index.mjs"
       }
     },
     "./cookie": {
+      "development": {
+        "types": "./src/cookie/index.ts",
+        "default": "./src/cookie/index.ts"
+      },
       "import": {
         "types": "./dist/cookie/index.d.ts",
         "default": "./dist/cookie/index.mjs"
       }
     },
     "./http/headers": {
+      "development": {
+        "types": "./src/http/headers/index.ts",
+        "default": "./src/http/headers/index.ts"
+      },
       "import": {
         "types": "./dist/http/headers/index.d.ts",
         "default": "./dist/http/headers/index.mjs"
       }
     },
     "./http/search_params": {
+      "development": {
+        "types": "./src/http/search_params/index.ts",
+        "default": "./src/http/search_params/index.ts"
+      },
       "import": {
         "types": "./dist/http/search_params/index.d.ts",
         "default": "./dist/http/search_params/index.mjs"
       }
     },
     "./http/status": {
+      "development": {
+        "types": "./src/http/status/index.ts",
+        "default": "./src/http/status/index.ts"
+      },
       "import": {
         "types": "./dist/http/status/index.d.ts",
         "default": "./dist/http/status/index.mjs"
       }
     },
     "./jwt": {
+      "development": {
+        "types": "./src/jwt/index.ts",
+        "default": "./src/jwt/index.ts"
+      },
       "import": {
         "types": "./dist/jwt/index.d.ts",
         "default": "./dist/jwt/index.mjs"
       }
     },
     "./kysely": {
+      "development": {
+        "types": "./src/kysely/index.ts",
+        "default": "./src/kysely/index.ts"
+      },
       "import": {
         "types": "./dist/kysely/index.d.ts",
         "default": "./dist/kysely/index.mjs"
       }
     },
     "./neverthrow": {
+      "development": {
+        "types": "./src/neverthrow/index.ts",
+        "default": "./src/neverthrow/index.ts"
+      },
       "import": {
         "types": "./dist/neverthrow/index.d.ts",
         "default": "./dist/neverthrow/index.mjs"
       }
     },
     "./oauth_providers": {
+      "development": {
+        "types": "./src/oauth_providers/index.ts",
+        "default": "./src/oauth_providers/index.ts"
+      },
       "import": {
         "types": "./dist/oauth_providers/index.d.ts",
         "default": "./dist/oauth_providers/index.mjs"
       }
     },
     "./test/matchers": {
+      "development": {
+        "types": "./src/test/matchers/index.ts",
+        "default": "./src/test/matchers/index.ts"
+      },
       "import": {
         "types": "./dist/test/matchers/index.d.ts",
         "default": "./dist/test/matchers/index.mjs"
       }
     },
+    "./test/matchers/http": {
+      "development": {
+        "types": "./src/test/matchers/http/index.ts",
+        "default": "./src/test/matchers/http/index.ts"
+      },
+      "import": {
+        "types": "./dist/test/matchers/http/index.d.ts",
+        "default": "./dist/test/matchers/http/index.mjs"
+      }
+    },
+    "./test/matchers/neverthrow": {
+      "development": {
+        "types": "./src/test/matchers/neverthrow/index.ts",
+        "default": "./src/test/matchers/neverthrow/index.ts"
+      },
+      "import": {
+        "types": "./dist/test/matchers/neverthrow/index.d.ts",
+        "default": "./dist/test/matchers/neverthrow/index.mjs"
+      }
+    },
+    "./test/matchers/types": {
+      "development": {
+        "types": "./src/test/matchers/types/index.ts",
+        "default": "./src/test/matchers/types/index.ts"
+      },
+      "import": {
+        "types": "./dist/test/matchers/types/index.d.ts",
+        "default": "./dist/test/matchers/types/index.mjs"
+      }
+    },
     "./validation": {
+      "development": {
+        "types": "./src/validation/index.ts",
+        "default": "./src/validation/index.ts"
+      },
       "import": {
         "types": "./dist/validation/index.d.ts",
         "default": "./dist/validation/index.mjs"
-      }
-    },
-    "./~auth": {
-      "import": {
-        "types": "./src/auth/index.ts",
-        "default": "./src/auth/index.ts"
-      }
-    },
-    "./~context": {
-      "import": {
-        "types": "./src/context/index.ts",
-        "default": "./src/context/index.ts"
-      }
-    },
-    "./~cookie": {
-      "import": {
-        "types": "./src/cookie/index.ts",
-        "default": "./src/cookie/index.ts"
-      }
-    },
-    "./~http/headers": {
-      "import": {
-        "types": "./src/http/headers/index.ts",
-        "default": "./src/http/headers/index.ts"
-      }
-    },
-    "./~http/search_params": {
-      "import": {
-        "types": "./src/http/search_params/index.ts",
-        "default": "./src/http/search_params/index.ts"
-      }
-    },
-    "./~http/status": {
-      "import": {
-        "types": "./src/http/status/index.ts",
-        "default": "./src/http/status/index.ts"
-      }
-    },
-    "./~jwt": {
-      "import": {
-        "types": "./src/jwt/index.ts",
-        "default": "./src/jwt/index.ts"
-      }
-    },
-    "./~kysely": {
-      "import": {
-        "types": "./src/kysely/index.ts",
-        "default": "./src/kysely/index.ts"
-      }
-    },
-    "./~oauth_providers": {
-      "import": {
-        "types": "./src/oauth_providers/index.ts",
-        "default": "./src/oauth_providers/index.ts"
-      }
-    },
-    "./~test/matchers": {
-      "import": {
-        "types": "./src/test/matchers/index.ts",
-        "default": "./src/test/matchers/index.ts"
-      }
-    },
-    "./~test/matchers/types": {
-      "import": {
-        "types": "./src/test/matchers/types/index.ts",
-        "default": "./src/test/matchers/types/index.ts"
-      }
-    },
-    "./~validation": {
-      "import": {
-        "types": "./src/validation/index.ts",
-        "default": "./src/validation/index.ts"
       }
     }
   },
@@ -178,7 +184,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.7.1",
-    "@meow-meow-dev/shared-configs": "^1.4.7",
+    "@meow-meow-dev/shared-configs": "^1.5.0",
     "@microsoft/api-extractor": "^7.50.0",
     "@tsconfig/node22": "^22.0.0",
     "@vitest/coverage-istanbul": "^2.1.9",
@@ -193,8 +199,9 @@
     "prettier": "^3.5.1",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3",
+    "vite": "5",
     "vitest": "^2.1.8",
-    "wrangler": "^3.108.1"
+    "wrangler": "^3.109.1"
   },
   "peerDependencies": {
     "@hono/oauth-providers": "^0.6.2",
