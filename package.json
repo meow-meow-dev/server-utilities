@@ -187,6 +187,7 @@
     "@meow-meow-dev/shared-configs": "^1.5.0",
     "@microsoft/api-extractor": "^7.50.0",
     "@tsconfig/node22": "^22.0.0",
+    "@typescript-eslint/parser": "^8.24.1",
     "@vitest/coverage-istanbul": "^2.1.9",
     "@vitest/ui": "^2.1.9",
     "clean-package": "^2.2.0",
