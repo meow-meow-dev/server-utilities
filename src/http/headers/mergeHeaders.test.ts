@@ -42,16 +42,11 @@ describe("mergeHeaders", () => {
   it("correctly merges records", ({ expect }) => {
     const mergedHeaders = mergeHeaders(currentHeaderFields, addedFields);
 
-    if (typeof mergedHeaders === "object") {
-      if ("content-type" in mergedHeaders)
-        expect(mergedHeaders["content-type"]).toEqual(
-          currentHeaderFields["content-type"],
-        );
-      else expect.fail();
-
-      if ("accessToken" in mergedHeaders)
-        expect(mergedHeaders.accessToken).toEqual(addedFields.accessToken);
-      else expect.fail();
+    if (mergedHeaders instanceof Headers) {
+      expect(mergedHeaders.get("content-type")).toEqual(
+        currentHeaderFields["content-type"],
+      );
+      expect(mergedHeaders.get("accessToken")).toEqual(addedFields.accessToken);
     } else {
       expect.fail();
     }

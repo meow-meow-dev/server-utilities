@@ -1,4 +1,4 @@
-import type { ExpectationResult } from "@meow-meow-dev/server-utilities/~test/matchers/types";
+import type { ExpectationResult } from "@meow-meow-dev/server-utilities/test/matchers/types";
 
 import { ResultAsync } from "neverthrow";
 

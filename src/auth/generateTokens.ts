@@ -5,7 +5,7 @@ import {
   seconds,
   weeks,
   WithoutJWTTimeStamps,
-} from "@meow-meow-dev/server-utilities/~jwt";
+} from "@meow-meow-dev/server-utilities/jwt";
 import { sign } from "hono/jwt";
 
 export type GenerateTokensReturn = {

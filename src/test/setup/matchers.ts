@@ -1,4 +1,6 @@
-import { extendMatchers } from "@meow-meow-dev/server-utilities/~test/matchers";
+import { extendWithHTTPMatchers } from "@meow-meow-dev/server-utilities/test/matchers/http";
+import { extendWithNeverthrowMatchers } from "@meow-meow-dev/server-utilities/test/matchers/neverthrow";
 import { expect } from "vitest";
 
-extendMatchers(expect);
+extendWithHTTPMatchers(expect);
+extendWithNeverthrowMatchers(expect);

@@ -1,4 +1,4 @@
-import { nonEmptyStringSchema } from "@meow-meow-dev/server-utilities/~validation";
+import { nonEmptyStringSchema } from "@meow-meow-dev/server-utilities/validation";
 import * as v from "valibot";
 
 export const standardIdTokenClaimsSchemas = {
