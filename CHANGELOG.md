@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.3...v3.6.0) (2025-02-17)
+
+
+### Features
+
+* separately export neverthrow matchers, use conditions for imports ([#68](https://github.com/meow-meow-dev/server-utilities/issues/68)) ([7f02480](https://github.com/meow-meow-dev/server-utilities/commit/7f02480a0be586de9b7c96127f7057eca157f64f))
+
 ## [3.5.3](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.2...v3.5.3) (2025-02-14)
 
 
