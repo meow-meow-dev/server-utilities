@@ -9,7 +9,7 @@ export default defineConfig({
   clean: true,
   entry,
   esbuildOptions(options) {
-    options.conditions = ["development"];
+    options.conditions = ["server-utilities-development"];
   },
   experimentalDts: true,
   format: "esm",
