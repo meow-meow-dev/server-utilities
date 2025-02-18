@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.6.0...v3.6.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* fix exports by using a different condition ([#70](https://github.com/meow-meow-dev/server-utilities/issues/70)) ([e65c3e8](https://github.com/meow-meow-dev/server-utilities/commit/e65c3e8aa2dc4c447b85aa76130f164002275616))
+
 ## [3.6.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.5.3...v3.6.0) (2025-02-17)
 
 
