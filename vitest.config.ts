@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   resolve: {
-    conditions: ["dev"],
+    conditions: ["server-utilities-development"],
   },
   test: {
     coverage: {
