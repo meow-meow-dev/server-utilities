@@ -8,9 +8,6 @@ const entry = globSync("./src/**/index.ts").filter(
 export default defineConfig({
   clean: true,
   entry,
-  esbuildOptions(options) {
-    options.conditions = ["server-utilities-development"];
-  },
   experimentalDts: true,
   format: "esm",
   outExtension() {

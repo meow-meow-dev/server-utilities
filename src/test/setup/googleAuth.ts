@@ -1,4 +1,4 @@
-import { replaceSearchParams } from "@meow-meow-dev/server-utilities/http/search_params";
+import { replaceSearchParams } from "#http_search_params";
 import { MiddlewareHandler } from "hono";
 import { vi } from "vitest";
 

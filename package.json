@@ -5,152 +5,164 @@
   "license": "MIT",
   "author": "Jérôme <jerome@meow-meow.dev>",
   "type": "module",
+  "imports": {
+    "#auth": {
+      "types": "./src/auth/index.ts",
+      "default": "./src/auth/index.ts"
+    },
+    "#context": {
+      "types": "./src/context/index.ts",
+      "default": "./src/context/index.ts"
+    },
+    "#cookie": {
+      "types": "./src/cookie/index.ts",
+      "default": "./src/cookie/index.ts"
+    },
+    "#http/headers": {
+      "types": "./src/http/headers/index.ts",
+      "default": "./src/http/headers/index.ts"
+    },
+    "#http/search_params": {
+      "types": "./src/http/search_params/index.ts",
+      "default": "./src/http/search_params/index.ts"
+    },
+    "#http/status": {
+      "types": "./src/http/status/index.ts",
+      "default": "./src/http/status/index.ts"
+    },
+    "#http_search_params": {
+      "types": "./src/http/search_params/index.ts",
+      "default": "./src/http/search_params/index.ts"
+    },
+    "#jwt": {
+      "types": "./src/jwt/index.ts",
+      "default": "./src/jwt/index.ts"
+    },
+    "#kysely": {
+      "types": "./src/kysely/index.ts",
+      "default": "./src/kysely/index.ts"
+    },
+    "#neverthrow": {
+      "types": "./src/neverthrow/index.ts",
+      "default": "./src/neverthrow/index.ts"
+    },
+    "#oauth_providers": {
+      "types": "./src/oauth_providers/index.ts",
+      "default": "./src/oauth_providers/index.ts"
+    },
+    "#test/matchers": {
+      "types": "./src/test/matchers/index.ts",
+      "default": "./src/test/matchers/index.ts"
+    },
+    "#test/matchers/http": {
+      "types": "./src/test/matchers/http/index.ts",
+      "default": "./src/test/matchers/http/index.ts"
+    },
+    "#test/matchers/neverthrow": {
+      "types": "./src/test/matchers/neverthrow/index.ts",
+      "default": "./src/test/matchers/neverthrow/index.ts"
+    },
+    "#test/matchers/types": {
+      "types": "./src/test/matchers/types/index.ts",
+      "default": "./src/test/matchers/types/index.ts"
+    },
+    "#validation": {
+      "types": "./src/validation/index.ts",
+      "default": "./src/validation/index.ts"
+    }
+  },
   "exports": {
     "./auth": {
-      "server-utilities-development": {
-        "types": "./src/auth/index.ts",
-        "default": "./src/auth/index.ts"
-      },
       "import": {
         "types": "./dist/auth/index.d.ts",
         "default": "./dist/auth/index.mjs"
       }
     },
     "./context": {
-      "server-utilities-development": {
-        "types": "./src/context/index.ts",
-        "default": "./src/context/index.ts"
-      },
       "import": {
         "types": "./dist/context/index.d.ts",
         "default": "./dist/context/index.mjs"
       }
     },
     "./cookie": {
-      "server-utilities-development": {
-        "types": "./src/cookie/index.ts",
-        "default": "./src/cookie/index.ts"
-      },
       "import": {
         "types": "./dist/cookie/index.d.ts",
         "default": "./dist/cookie/index.mjs"
       }
     },
     "./http/headers": {
-      "server-utilities-development": {
-        "types": "./src/http/headers/index.ts",
-        "default": "./src/http/headers/index.ts"
-      },
       "import": {
         "types": "./dist/http/headers/index.d.ts",
         "default": "./dist/http/headers/index.mjs"
       }
     },
     "./http/search_params": {
-      "server-utilities-development": {
-        "types": "./src/http/search_params/index.ts",
-        "default": "./src/http/search_params/index.ts"
-      },
       "import": {
         "types": "./dist/http/search_params/index.d.ts",
         "default": "./dist/http/search_params/index.mjs"
       }
     },
     "./http/status": {
-      "server-utilities-development": {
-        "types": "./src/http/status/index.ts",
-        "default": "./src/http/status/index.ts"
-      },
       "import": {
         "types": "./dist/http/status/index.d.ts",
         "default": "./dist/http/status/index.mjs"
       }
     },
+    "./http_search_params": {
+      "import": {
+        "types": "./dist/http/search_params/index.d.ts",
+        "default": "./dist/http/search_params/index.mjs"
+      }
+    },
     "./jwt": {
-      "server-utilities-development": {
-        "types": "./src/jwt/index.ts",
-        "default": "./src/jwt/index.ts"
-      },
       "import": {
         "types": "./dist/jwt/index.d.ts",
         "default": "./dist/jwt/index.mjs"
       }
     },
     "./kysely": {
-      "server-utilities-development": {
-        "types": "./src/kysely/index.ts",
-        "default": "./src/kysely/index.ts"
-      },
       "import": {
         "types": "./dist/kysely/index.d.ts",
         "default": "./dist/kysely/index.mjs"
       }
     },
     "./neverthrow": {
-      "server-utilities-development": {
-        "types": "./src/neverthrow/index.ts",
-        "default": "./src/neverthrow/index.ts"
-      },
       "import": {
         "types": "./dist/neverthrow/index.d.ts",
         "default": "./dist/neverthrow/index.mjs"
       }
     },
     "./oauth_providers": {
-      "server-utilities-development": {
-        "types": "./src/oauth_providers/index.ts",
-        "default": "./src/oauth_providers/index.ts"
-      },
       "import": {
         "types": "./dist/oauth_providers/index.d.ts",
         "default": "./dist/oauth_providers/index.mjs"
       }
     },
     "./test/matchers": {
-      "server-utilities-development": {
-        "types": "./src/test/matchers/index.ts",
-        "default": "./src/test/matchers/index.ts"
-      },
       "import": {
         "types": "./dist/test/matchers/index.d.ts",
         "default": "./dist/test/matchers/index.mjs"
       }
     },
     "./test/matchers/http": {
-      "server-utilities-development": {
-        "types": "./src/test/matchers/http/index.ts",
-        "default": "./src/test/matchers/http/index.ts"
-      },
       "import": {
         "types": "./dist/test/matchers/http/index.d.ts",
         "default": "./dist/test/matchers/http/index.mjs"
       }
     },
     "./test/matchers/neverthrow": {
-      "server-utilities-development": {
-        "types": "./src/test/matchers/neverthrow/index.ts",
-        "default": "./src/test/matchers/neverthrow/index.ts"
-      },
       "import": {
         "types": "./dist/test/matchers/neverthrow/index.d.ts",
         "default": "./dist/test/matchers/neverthrow/index.mjs"
       }
     },
     "./test/matchers/types": {
-      "server-utilities-development": {
-        "types": "./src/test/matchers/types/index.ts",
-        "default": "./src/test/matchers/types/index.ts"
-      },
       "import": {
         "types": "./dist/test/matchers/types/index.d.ts",
         "default": "./dist/test/matchers/types/index.mjs"
       }
     },
     "./validation": {
-      "server-utilities-development": {
-        "types": "./src/validation/index.ts",
-        "default": "./src/validation/index.ts"
-      },
       "import": {
         "types": "./dist/validation/index.d.ts",
         "default": "./dist/validation/index.mjs"
@@ -183,20 +195,20 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.7.1",
-    "@eslint/js": "^9.20.0",
+    "@eslint/js": "^9.21.0",
     "@meow-meow-dev/shared-configs": "^1.5.0",
-    "@microsoft/api-extractor": "^7.50.0",
+    "@microsoft/api-extractor": "^7.50.1",
     "@tsconfig/node22": "^22.0.0",
-    "@typescript-eslint/parser": "^8.24.1",
-    "@vitest/coverage-istanbul": "^2.1.9",
-    "@vitest/eslint-plugin": "^1.1.31",
-    "@vitest/ui": "^2.1.9",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vitest/coverage-istanbul": "^3.0.7",
+    "@vitest/eslint-plugin": "^1.1.33",
+    "@vitest/ui": "^3.0.7",
     "clean-package": "^2.2.0",
     "commitizen": "^4.3.1",
     "commitlint": "^19.7.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.20.1",
-    "eslint-import-resolver-typescript": "^3.8.1",
+    "eslint": "^9.21.0",
+    "eslint-import-resolver-typescript": "^3.8.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.15.1",
     "eslint-plugin-no-relative-import-paths": "^1.6.1",
@@ -208,16 +220,16 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-testing-library": "^7.1.1",
-    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-unicorn": "^57.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "prettier": "^3.5.1",
-    "tsup": "^8.3.6",
+    "prettier": "^3.5.2",
+    "tsup": "^8.4.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1",
-    "vite": "5",
-    "vitest": "^2.1.8",
-    "wrangler": "^3.109.1"
+    "typescript-eslint": "^8.25.0",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7",
+    "wrangler": "^3.110.0"
   },
   "peerDependencies": {
     "@hono/oauth-providers": "^0.6.2",

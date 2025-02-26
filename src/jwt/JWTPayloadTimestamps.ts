@@ -1,4 +1,4 @@
-import { integerSchema } from "@meow-meow-dev/server-utilities/validation";
+import { integerSchema } from "#validation";
 import * as v from "valibot";
 
 import { type Duration, durationToSeconds } from "./duration.js";

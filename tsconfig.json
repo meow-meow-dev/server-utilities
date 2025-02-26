@@ -1,7 +1,6 @@
 {
   "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
-    "customConditions": ["server-utilities-development"],
     "rootDir": ".",
     "types": [
       "./src/vite-env.d.ts",
