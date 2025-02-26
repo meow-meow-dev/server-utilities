@@ -3,7 +3,7 @@ import {
   nonEmptyStringSchema,
   queryIntegerIdSchema,
   vValidator,
-} from "@meow-meow-dev/server-utilities/validation";
+} from "#validation";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import * as v from "valibot";

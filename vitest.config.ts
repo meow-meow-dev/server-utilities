@@ -1,10 +1,6 @@
-/// <reference types="vitest" />
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  resolve: {
-    conditions: ["server-utilities-development"],
-  },
   test: {
     coverage: {
       exclude: ["src/**/index.ts", "src/**/*.test.ts"],

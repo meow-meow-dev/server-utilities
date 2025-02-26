@@ -1,5 +1,5 @@
-import { extendWithHTTPMatchers } from "@meow-meow-dev/server-utilities/test/matchers/http";
-import { extendWithNeverthrowMatchers } from "@meow-meow-dev/server-utilities/test/matchers/neverthrow";
+import { extendWithHTTPMatchers } from "#test/matchers/http";
+import { extendWithNeverthrowMatchers } from "#test/matchers/neverthrow";
 import { expect } from "vitest";
 
 extendWithHTTPMatchers(expect);
