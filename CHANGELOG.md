@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.6.1...v3.7.0) (2025-02-26)
+
+
+### Features
+
+* bump packages, remove conditions (use package.json imports instead) ([#72](https://github.com/meow-meow-dev/server-utilities/issues/72)) ([393ee2e](https://github.com/meow-meow-dev/server-utilities/commit/393ee2e322356f2e8d2bb6a8145cdb22d97b2768))
+
 ## [3.6.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.6.0...v3.6.1) (2025-02-18)
 
 
