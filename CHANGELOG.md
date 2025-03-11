@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.8.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.8.0...v3.8.1) (2025-03-11)
+
+
+### Bug Fixes
+
+* fix package.json exports ([#76](https://github.com/meow-meow-dev/server-utilities/issues/76)) ([ce4e0f7](https://github.com/meow-meow-dev/server-utilities/commit/ce4e0f7e3222d7b8561dbeeeff453f9f6a1a5a61))
+
 ## [3.8.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.7.0...v3.8.0) (2025-03-11)
 
 
