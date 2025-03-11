@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.8.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.7.0...v3.8.0) (2025-03-11)
+
+
+### Features
+
+* add queries helpers & internalServerErrorFactory ([#74](https://github.com/meow-meow-dev/server-utilities/issues/74)) ([68759ab](https://github.com/meow-meow-dev/server-utilities/commit/68759ab6963ca5b187ef17add9c17a538d85ad1f))
+
 ## [3.7.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.6.1...v3.7.0) (2025-02-26)
 
 
