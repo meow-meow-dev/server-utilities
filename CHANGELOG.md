@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.10.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.9.0...v3.10.0) (2025-03-11)
+
+
+### Features
+
+* export resultAsyncFromPromise ([#80](https://github.com/meow-meow-dev/server-utilities/issues/80)) ([4e274c2](https://github.com/meow-meow-dev/server-utilities/commit/4e274c281b50089cd713017a568cda377f7f150b))
+
 ## [3.9.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.8.1...v3.9.0) (2025-03-11)
 
 
