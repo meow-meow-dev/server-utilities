@@ -50,6 +50,10 @@
       "types": "./src/oauth_providers/index.ts",
       "default": "./src/oauth_providers/index.ts"
     },
+    "#queries": {
+      "types": "./src/queries/index.ts",
+      "default": "./src/queries/index.ts"
+    },
     "#test/matchers": {
       "types": "./src/test/matchers/index.ts",
       "default": "./src/test/matchers/index.ts"
