@@ -142,6 +142,12 @@
         "default": "./dist/oauth_providers/index.mjs"
       }
     },
+    "./queries": {
+      "import": {
+        "types": "./dist/queries/index.d.ts",
+        "default": "./dist/queries/index.mjs"
+      }
+    },
     "./test/matchers": {
       "import": {
         "types": "./dist/test/matchers/index.d.ts",
