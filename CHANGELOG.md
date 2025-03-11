@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.9.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.8.1...v3.9.0) (2025-03-11)
+
+
+### Features
+
+* export extra files in queries/, add kysely debug options ([#78](https://github.com/meow-meow-dev/server-utilities/issues/78)) ([9045eac](https://github.com/meow-meow-dev/server-utilities/commit/9045eac010b1eb304277061af89cf32676f52b4e))
+
 ## [3.8.1](https://github.com/meow-meow-dev/server-utilities/compare/v3.8.0...v3.8.1) (2025-03-11)
 
 
