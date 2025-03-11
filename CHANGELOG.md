@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.11.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.10.0...v3.11.0) (2025-03-11)
+
+
+### Features
+
+* add httpErrorFromHTTPErrorType ([#82](https://github.com/meow-meow-dev/server-utilities/issues/82)) ([3752333](https://github.com/meow-meow-dev/server-utilities/commit/3752333dd3f55901d01a73f7971676cc489deaa9))
+
 ## [3.10.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.9.0...v3.10.0) (2025-03-11)
 
 
