@@ -18,6 +18,10 @@
       "types": "./src/cookie/index.ts",
       "default": "./src/cookie/index.ts"
     },
+    "#hono": {
+      "types": "./src/hono/index.ts",
+      "default": "./src/hono/index.ts"
+    },
     "#http/headers": {
       "types": "./src/http/headers/index.ts",
       "default": "./src/http/headers/index.ts"
@@ -92,6 +96,12 @@
       "import": {
         "types": "./dist/cookie/index.d.ts",
         "default": "./dist/cookie/index.mjs"
+      }
+    },
+    "./hono": {
+      "import": {
+        "types": "./dist/hono/index.d.ts",
+        "default": "./dist/hono/index.mjs"
       }
     },
     "./http/headers": {
