@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.12.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.11.0...v3.12.0) (2025-03-12)
+
+
+### Features
+
+* add customResponse / defaultResponse / setAccesTokenCookieFromUser ([#84](https://github.com/meow-meow-dev/server-utilities/issues/84)) ([9a4e7fb](https://github.com/meow-meow-dev/server-utilities/commit/9a4e7fb0148cee9de069a654439cfb56b8a29860))
+
 ## [3.11.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.10.0...v3.11.0) (2025-03-11)
 
 
