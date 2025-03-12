@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.13.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.12.0...v3.13.0) (2025-03-12)
+
+
+### Features
+
+* add HandlerProps ([#86](https://github.com/meow-meow-dev/server-utilities/issues/86)) ([cc43d43](https://github.com/meow-meow-dev/server-utilities/commit/cc43d4338b0bc307683945697fcac51cb8fcb6c4))
+
 ## [3.12.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.11.0...v3.12.0) (2025-03-12)
 
 
