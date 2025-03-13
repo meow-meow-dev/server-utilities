@@ -14,3 +14,12 @@ export function extractUserIdFromSubject(
 
   return matches === null ? undefined : Number.parseInt(matches[1]);
 }
+
+export function unsafeExtractUserIdFromSubject(
+  subject: string,
+): number | undefined {
+  const subRegexp = new RegExp(`^.*\\|(\\d+)$`);
+  const matches = subRegexp.exec(subject);
+
+  return matches === null ? undefined : Number.parseInt(matches[1]);
+}
