@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.14.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.13.0...v3.14.0) (2025-03-13)
+
+
+### Features
+
+* add unsafeExtractUserIdFromSubject ([#88](https://github.com/meow-meow-dev/server-utilities/issues/88)) ([60553c8](https://github.com/meow-meow-dev/server-utilities/commit/60553c823340ff57b674cc9b5091c5b8fa94053d))
+
 ## [3.13.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.12.0...v3.13.0) (2025-03-12)
 
 
