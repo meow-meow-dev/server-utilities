@@ -53,9 +53,9 @@ async function toBeHTTPStatus(
   expectedStatus: number,
   expectedContent: unknown,
 ): Promise<ExpectationResult> {
-  if (!(received instanceof Promise))
+  if (!(received instanceof Promise || received instanceof Response))
     return {
-      message: (): string => "Not a response promise",
+      message: (): string => "Not a response promise or a response",
       pass: false,
     };
 

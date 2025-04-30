@@ -5,7 +5,7 @@
     "types": [
       "./src/vite-env.d.ts",
       "./src/vitest.d.ts",
-      "./src/_generated/wrangler.d.ts"
+      "./src/_generated/wrangler/worker-configuration.d.ts"
     ]
   }
 }
