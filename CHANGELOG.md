@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.15.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.14.0...v3.15.0) (2025-04-30)
+
+
+### Features
+
+* bump packages / allow Response in addition to Promise&lt;Respon ([#90](https://github.com/meow-meow-dev/server-utilities/issues/90)) ([382a870](https://github.com/meow-meow-dev/server-utilities/commit/382a8709e971db1438de48393d0d1ecf76e2c053))
+
 ## [3.14.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.13.0...v3.14.0) (2025-03-13)
 
 
