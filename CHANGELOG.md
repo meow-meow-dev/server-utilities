@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/meow-meow-dev/server-utilities/compare/v4.0.0...v4.0.1) (2025-06-02)
+
+
+### Bug Fixes
+
+* fix duplicate authProps function / HandlerAuthenticationProps type ([#94](https://github.com/meow-meow-dev/server-utilities/issues/94)) ([27b3bf2](https://github.com/meow-meow-dev/server-utilities/commit/27b3bf21291781ba22080524bca7a5523e4c147b))
+
 ## [4.0.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.15.0...v4.0.0) (2025-06-02)
 
 
