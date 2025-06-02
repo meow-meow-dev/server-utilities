@@ -10,9 +10,9 @@
       "types": "./src/auth/index.ts",
       "default": "./src/auth/index.ts"
     },
-    "#context": {
-      "types": "./src/context/index.ts",
-      "default": "./src/context/index.ts"
+    "#auth/*": {
+      "types": "./src/auth/*/index.ts",
+      "default": "./src/auth/*/index.ts"
     },
     "#cookie": {
       "types": "./src/cookie/index.ts",
@@ -50,6 +50,10 @@
       "types": "./src/neverthrow/index.ts",
       "default": "./src/neverthrow/index.ts"
     },
+    "#neverthrow/*": {
+      "types": "./src/neverthrow/*/index.ts",
+      "default": "./src/neverthrow/*/index.ts"
+    },
     "#oauth_providers": {
       "types": "./src/oauth_providers/index.ts",
       "default": "./src/oauth_providers/index.ts"
@@ -57,6 +61,10 @@
     "#queries": {
       "types": "./src/queries/index.ts",
       "default": "./src/queries/index.ts"
+    },
+    "#schemas": {
+      "types": "./src/schemas/index.ts",
+      "default": "./src/schemas/index.ts"
     },
     "#test/matchers": {
       "types": "./src/test/matchers/index.ts",
@@ -74,6 +82,10 @@
       "types": "./src/test/matchers/types/index.ts",
       "default": "./src/test/matchers/types/index.ts"
     },
+    "#types": {
+      "types": "./src/types/index.ts",
+      "default": "./src/types/index.ts"
+    },
     "#validation": {
       "types": "./src/validation/index.ts",
       "default": "./src/validation/index.ts"
@@ -86,10 +98,10 @@
         "default": "./dist/auth/index.mjs"
       }
     },
-    "./context": {
+    "./auth/*": {
       "import": {
-        "types": "./dist/context/index.d.ts",
-        "default": "./dist/context/index.mjs"
+        "types": "./dist/auth/*/index.d.ts",
+        "default": "./dist/auth/*/index.mjs"
       }
     },
     "./cookie": {
@@ -146,6 +158,12 @@
         "default": "./dist/neverthrow/index.mjs"
       }
     },
+    "./neverthrow/*": {
+      "import": {
+        "types": "./dist/neverthrow/*/index.d.ts",
+        "default": "./dist/neverthrow/*/index.mjs"
+      }
+    },
     "./oauth_providers": {
       "import": {
         "types": "./dist/oauth_providers/index.d.ts",
@@ -156,6 +174,12 @@
       "import": {
         "types": "./dist/queries/index.d.ts",
         "default": "./dist/queries/index.mjs"
+      }
+    },
+    "./schemas": {
+      "import": {
+        "types": "./dist/schemas/index.d.ts",
+        "default": "./dist/schemas/index.mjs"
       }
     },
     "./test/matchers": {
@@ -182,6 +206,12 @@
         "default": "./dist/test/matchers/types/index.mjs"
       }
     },
+    "./types": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/types/index.mjs"
+      }
+    },
     "./validation": {
       "import": {
         "types": "./dist/validation/index.d.ts",
@@ -201,7 +231,7 @@
     "prepack": "clean-package",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "qa": "pnpm generate_code && rm -rf dist && pnpm lint:check && pnpm prettier:check && pnpm tsc:check && pnpm unit_tests",
+    "qa": "pnpm generate_code && rm -rf dist && pnpm tsc:check && pnpm unit_tests && pnpm lint:check && pnpm prettier:check",
     "tsc:check": "tsc -noEmit",
     "unit_tests": "pnpm vitest:run",
     "vitest:run": "vitest run",
@@ -213,6 +243,10 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "dependencies": {
+    "luxon": "^3.6.1",
+    "nanoid": "^5.1.5"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.25.1",
@@ -221,6 +255,7 @@
     "@tanstack/eslint-plugin-query": "^5.74.7",
     "@tanstack/eslint-plugin-router": "^1.115.0",
     "@tsconfig/node22": "^22.0.1",
+    "@types/luxon": "^3.6.2",
     "@types/node": "^22.15.3",
     "@typescript-eslint/parser": "^8.31.1",
     "@vitest/coverage-istanbul": "^3.1.2",
@@ -251,7 +286,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.1",
     "vite": "^6.3.4",
-    "vitest": "^3.1.2",
+    "vitest": "^3.1.3",
     "wrangler": "^4.14.0"
   },
   "peerDependencies": {
@@ -259,7 +294,7 @@
     "@hono/valibot-validator": "^0.5.2",
     "@noxharmonium/kysely-d1": "^0.4.0",
     "hono": "^4.7.1",
-    "kysely": "^0.27.5",
+    "kysely": "^0.28.2",
     "neverthrow": "^8.1.1",
     "type-fest": "^4.34.1",
     "valibot": "1.0.0-rc.0"
