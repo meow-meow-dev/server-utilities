@@ -1,4 +1,4 @@
-import type { HandlerAuthenticationProps } from "#types";
+import type { HandlerAuthenticationProps } from "#auth/jwt/types";
 import type { Context, Env } from "hono";
 
 export function authProps<

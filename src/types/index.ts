@@ -17,12 +17,6 @@ export type Administrator = {
 
 export type AdministratorRole = v.InferOutput<typeof administratorRoleSchema>;
 
-export type HandlerAuthenticationProps = {
-  authentication: {
-    userId: number;
-  };
-};
-
 export type Identity = v.InferOutput<typeof identitySchema>;
 
 export type IdToken = v.InferOutput<typeof idTokenSchema>;
