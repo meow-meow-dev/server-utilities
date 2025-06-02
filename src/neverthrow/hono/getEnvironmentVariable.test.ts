@@ -5,7 +5,7 @@ import { describe, it } from "vitest";
 import { getEnvironmentVariable } from "./getEnvironmentVariable.js";
 
 describe("getEnvironmentVariable", () => {
-  it("returns the standard status and text", async ({ expect }) => {
+  it("detects missing environment variables", async ({ expect }) => {
     import.meta.env.JWT_SECRET = "secret";
 
     const app = new Hono<{
@@ -15,8 +15,12 @@ describe("getEnvironmentVariable", () => {
         JWT_SECRET: string | undefined;
       };
     }>().get("/", (c) => {
-      expect(getEnvironmentVariable(c, "JWT_SECRET")).toEqual("secret");
-      expect(() => getEnvironmentVariable(c, "FORGOTTEN_VARIABLE")).toThrow();
+      expect(getEnvironmentVariable(c, "JWT_SECRET")._unsafeUnwrap()).toEqual(
+        "secret",
+      );
+      expect(() =>
+        getEnvironmentVariable(c, "FORGOTTEN_VARIABLE")._unsafeUnwrap(),
+      ).toThrow();
 
       return c.text("OK", 200);
     });

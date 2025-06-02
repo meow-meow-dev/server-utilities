@@ -1,5 +1,6 @@
 import type { MiddlewareHandler } from "hono";
 
+import { getEnvironmentVariable } from "#hono";
 import { forbidden, unauthorized } from "#http/status";
 import { type AccessTokenPayload } from "#jwt";
 import {
@@ -9,8 +10,6 @@ import {
 } from "#jwt";
 import { getCookie } from "hono/cookie";
 import { createMiddleware } from "hono/factory";
-
-import { getEnvironmentVariable } from "./getEnvironmentVariable.js";
 
 export type AccessTokenFactoryFactoryProps<Scope extends string> = {
   accessTokenPayload: AccessTokenPayload;

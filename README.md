@@ -16,7 +16,7 @@ They can also expect a specific text (`toBeHTTPOk("Update successful")`) or json
 
 ## Validation
 
-`@meow-meow-dev/server-utilities/validation` contains [Valibot](https://valibot.dev) utilities.
+`#validation` contains [Valibot](https://valibot.dev) utilities.
 
 ### vValibot
 
@@ -39,7 +39,7 @@ import {
   nonEmptyStringSchema,
   queryIntegerIdSchema,
   vValidator,
-} from "@meow-meow-dev/server-utilities/validation";
+} from "#validation";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import * as v from "valibot";
