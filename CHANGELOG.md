@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.15.0...v4.0.0) (2025-06-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed /context and moved it to /hono
+
+### Features
+
+* add JWT auth, neverthrow helpers for errors ([#92](https://github.com/meow-meow-dev/server-utilities/issues/92)) ([2dc3787](https://github.com/meow-meow-dev/server-utilities/commit/2dc37874dcc6b4ba70251c3f9ff5a0fee9b57219))
+
 ## [3.15.0](https://github.com/meow-meow-dev/server-utilities/compare/v3.14.0...v3.15.0) (2025-04-30)
 
 
