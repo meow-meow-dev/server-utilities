@@ -1,5 +1,6 @@
 export * from "./AccessTokenPayload.js";
 export * from "./Duration.js";
+export * from "./HandlerAuthProps.js";
 export * from "./IdTokenPayload.js";
 export * from "./JwtPayloadTimeStamps.js";
 export * from "./RefreshToken.js";

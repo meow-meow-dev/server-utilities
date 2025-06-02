@@ -1,8 +1,4 @@
-import type { Context, Env } from "hono";
-
-export type HandlerAuthenticationProps<AccessToken> = {
-  accessToken: AccessToken;
-};
+import type { Context } from "hono";
 
 export type HandlerBucketProps = {
   bucket: R2Bucket;
@@ -11,19 +7,6 @@ export type HandlerBucketProps = {
 export type HandlerDBProps = {
   db: D1Database;
 };
-
-export function authProps<
-  AccessToken,
-  E extends Env & {
-    Variables: {
-      accessToken: AccessToken;
-    };
-  },
->(c: Context<E>): HandlerAuthenticationProps<AccessToken> {
-  const { accessToken } = c.var;
-
-  return { accessToken };
-}
 
 export function bucketProps<Env extends { Bindings: { BUCKET: R2Bucket } }>(
   c: Context<Env>,
