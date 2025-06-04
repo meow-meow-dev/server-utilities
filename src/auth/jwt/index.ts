@@ -2,6 +2,7 @@ export * from "./authProps.js";
 export * from "./checkAccessTokenPermissions.js";
 export * from "./checkPermissionsMiddlewareHandlerFactory.js";
 export * from "./extractAccessTokenFromHeaders.js";
+export * from "./extractAccessTokenPayload.js";
 export * from "./extractJwtPayload.js";
 export * from "./extractRefreshTokenFromCookies.js";
 export * from "./generateAccessToken.js";
