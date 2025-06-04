@@ -38,10 +38,6 @@
       "types": "./src/http/search_params/index.ts",
       "default": "./src/http/search_params/index.ts"
     },
-    "#jwt": {
-      "types": "./src/jwt/index.ts",
-      "default": "./src/jwt/index.ts"
-    },
     "#kysely": {
       "types": "./src/kysely/index.ts",
       "default": "./src/kysely/index.ts"
@@ -138,12 +134,6 @@
       "import": {
         "types": "./dist/http/search_params/index.d.ts",
         "default": "./dist/http/search_params/index.mjs"
-      }
-    },
-    "./jwt": {
-      "import": {
-        "types": "./dist/jwt/index.d.ts",
-        "default": "./dist/jwt/index.mjs"
       }
     },
     "./kysely": {

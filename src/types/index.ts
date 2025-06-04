@@ -1,7 +1,6 @@
 import {
   administratorRoleSchema,
   identitySchema,
-  idTokenSchema,
   registeredUserRoleSchema,
   userRoleSchema,
 } from "#schemas";
@@ -18,8 +17,6 @@ export type Administrator = {
 export type AdministratorRole = v.InferOutput<typeof administratorRoleSchema>;
 
 export type Identity = v.InferOutput<typeof identitySchema>;
-
-export type IdToken = v.InferOutput<typeof idTokenSchema>;
 
 export type Payment = {
   amount: number;
