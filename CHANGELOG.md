@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/meow-meow-dev/server-utilities/compare/v4.0.1...v4.1.0) (2025-06-04)
+
+
+### Features
+
+* force release ([#97](https://github.com/meow-meow-dev/server-utilities/issues/97)) ([eb9121a](https://github.com/meow-meow-dev/server-utilities/commit/eb9121a1e2a7ec02b74225a1a0f136fe08ab352d))
+
 ## [4.0.1](https://github.com/meow-meow-dev/server-utilities/compare/v4.0.0...v4.0.1) (2025-06-02)
 
 
@@ -326,4 +333,3 @@
 ### Bug Fixes
 
 * initial library release ([#1](https://github.com/meow-meow-dev/server-utilities/issues/1)) ([5bcb015](https://github.com/meow-meow-dev/server-utilities/commit/5bcb015a43194fd54718e84a480af0976d0c591f))
-
