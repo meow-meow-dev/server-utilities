@@ -1,11 +1,10 @@
-import {
+import type {
   AccessTokenPayload,
-  addJWTPayloadTimestamps,
   Duration,
-  seconds,
-  weeks,
-  WithoutJWTTimeStamps,
-} from "#jwt";
+  WithoutJwtTimeStamps,
+} from "#auth/jwt/types";
+
+import { addJwtPayloadTimestamps, seconds, weeks } from "#auth/jwt/timestamps";
 import { sign } from "hono/jwt";
 
 export type GenerateTokensReturn = {
@@ -15,7 +14,7 @@ export type GenerateTokensReturn = {
 
 type GenerateTokensProps = {
   accesstokenExpiry?: Duration;
-  accessTokenPayload: WithoutJWTTimeStamps<AccessTokenPayload>;
+  accessTokenPayload: WithoutJwtTimeStamps<AccessTokenPayload>;
   idTokenExpiry?: Duration;
   idTokenPayload: Record<string, unknown>;
   secret: string;
@@ -30,13 +29,13 @@ export async function generateTokens({
 }: GenerateTokensProps): Promise<GenerateTokensReturn> {
   const [accessToken, idToken] = await Promise.all([
     sign(
-      addJWTPayloadTimestamps(accessTokenPayload, {
+      addJwtPayloadTimestamps(accessTokenPayload, {
         expiry: accesstokenExpiry,
       }),
       secret,
     ),
     sign(
-      addJWTPayloadTimestamps(idTokenPayload, { expiry: idTokenExpiry }),
+      addJwtPayloadTimestamps(idTokenPayload, { expiry: idTokenExpiry }),
       secret,
     ),
   ]);

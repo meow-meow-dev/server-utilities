@@ -1,5 +1,8 @@
-import type { IdTokenPayload, SubjectFactory } from "#auth/jwt/types";
-import type { WithoutJWTTimeStamps } from "#jwt";
+import type {
+  IdTokenPayload,
+  SubjectFactory,
+  WithoutJwtTimeStamps,
+} from "#auth/jwt/types";
 
 type GenerateTokensProps = {
   subjectFactory: SubjectFactory;
@@ -22,7 +25,7 @@ export function generateIdToken({
     identity: { firstName, lastName },
     role,
   },
-}: GenerateTokensProps): WithoutJWTTimeStamps<IdTokenPayload> {
+}: GenerateTokensProps): WithoutJwtTimeStamps<IdTokenPayload> {
   const sub = subjectFactory(id);
 
   return {

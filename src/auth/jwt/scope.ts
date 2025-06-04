@@ -1,4 +1,4 @@
-import { AccessTokenPayload } from "#jwt";
+import type { AccessTokenPayload } from "./types/AccessTokenPayload.js";
 
 const scopesSeparator = " ";
 
