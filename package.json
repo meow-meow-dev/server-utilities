@@ -270,6 +270,7 @@
     "eslint-plugin-testing-library": "^7.1.1",
     "eslint-plugin-unicorn": "^59.0.0",
     "husky": "^9.1.7",
+    "kysely-plugin-serialize": "^0.8.2",
     "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",
@@ -285,6 +286,7 @@
     "@noxharmonium/kysely-d1": "^0.4.0",
     "hono": "^4.7.1",
     "kysely": "^0.28.2",
+    "kysely-plugin-serialize": "^0.8.2",
     "neverthrow": "^8.1.1",
     "type-fest": "^4.34.1",
     "valibot": "1.0.0-rc.0"

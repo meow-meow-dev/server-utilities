@@ -135,6 +135,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+      kysely-plugin-serialize:
+        specifier: ^0.8.2
+        version: 0.8.2(kysely@0.28.2)
       lint-staged:
         specifier: ^15.5.1
         version: 15.5.1
@@ -2959,6 +2962,11 @@ packages:
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
+
+  kysely-plugin-serialize@0.8.2:
+    resolution: {integrity: sha512-81nyTvDPGNHTzs9/Si+GW69YkcQgy2PMlkCieihEyF9EmlGY/TURUZMhVRrLV1k3Hsit+AWCfoEOLJczbK3hDw==}
+    peerDependencies:
+      kysely: '>=0.26'
 
   kysely@0.28.2:
     resolution: {integrity: sha512-4YAVLoF0Sf0UTqlhgQMFU9iQECdah7n+13ANkiuVfRvlK+uI0Etbgd7bVP36dKlG+NXWbhGua8vnGt+sdhvT7A==}
@@ -7062,6 +7070,10 @@ snapshots:
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
+
+  kysely-plugin-serialize@0.8.2(kysely@0.28.2):
+    dependencies:
+      kysely: 0.28.2
 
   kysely@0.28.2: {}
 
