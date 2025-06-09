@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/meow-meow-dev/server-utilities/compare/v4.1.0...v4.2.0) (2025-06-09)
+
+
+### Features
+
+* serialize/unserialize dates in kysely ([#99](https://github.com/meow-meow-dev/server-utilities/issues/99)) ([5db7afb](https://github.com/meow-meow-dev/server-utilities/commit/5db7afbf8c59c4aed9305fec33a9fa2fa8ab4a46))
+
 ## [4.1.0](https://github.com/meow-meow-dev/server-utilities/compare/v4.0.1...v4.1.0) (2025-06-04)
 
 
