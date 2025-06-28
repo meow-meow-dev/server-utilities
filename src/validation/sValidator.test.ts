@@ -3,13 +3,13 @@ import { testClient } from "hono/testing";
 import * as v from "valibot";
 import { describe, it } from "vitest";
 
-import { vValidator } from "./vValidator.js";
+import { sValidator } from "./sValidator.js";
 
 const schema = v.pipe(v.string(), v.nonEmpty());
 
 describe("vValidator", () => {
   it("test", async ({ expect }) => {
-    const app = new Hono().get("/search", vValidator("json", schema), (c) =>
+    const app = new Hono().get("/search", sValidator("json", schema), (c) =>
       c.text(c.req.valid("json"), 200),
     );
     const res = await testClient(app).search.$get({ json: "" });

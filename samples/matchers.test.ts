@@ -2,7 +2,7 @@ import {
   integerSchema,
   nonEmptyStringSchema,
   queryIntegerIdSchema,
-  vValidator,
+  sValidator,
 } from "#validation";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
@@ -11,8 +11,8 @@ import { describe, it } from "vitest";
 
 const route = new Hono().post(
   "/api",
-  vValidator("query", v.strictObject({ id: queryIntegerIdSchema })),
-  vValidator(
+  sValidator("query", v.strictObject({ id: queryIntegerIdSchema })),
+  sValidator(
     "json",
     v.strictObject({ name: nonEmptyStringSchema, yearOfBirth: integerSchema }),
   ),

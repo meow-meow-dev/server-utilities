@@ -6,15 +6,15 @@ import type {
   InferOutput,
 } from "valibot";
 
-import { vValidator as vValidatorBase } from "@hono/valibot-validator";
+import { sValidator as sValidatorBase } from "@hono/standard-validator";
 
 type HasUndefined<T> = undefined extends T ? true : false;
 
-type VValidatorOptions = {
+type SValidatorOptions = {
   dumpErrors?: boolean;
 };
 
-export function vValidator<
+export function sValidator<
   T extends
     | GenericSchema<unknown, unknown>
     | GenericSchemaAsync<unknown, unknown>,
@@ -49,16 +49,15 @@ export function vValidator<
 >(
   target: Target,
   schema: T,
-  options?: VValidatorOptions,
+  options?: SValidatorOptions,
 ): MiddlewareHandler<E, P, V> {
-  return vValidatorBase<T, Target, E, P, In, Out, I, V>(
+  return sValidatorBase<T, Target, E, P, In, Out, I, V>(
     target,
     schema,
     (result, c) => {
       if (!result.success) {
         if (options?.dumpErrors) {
-          console.error(JSON.stringify(result.issues, null, 2));
-          console.error(result.output);
+          console.error(JSON.stringify(result.error, null, 2));
         }
 
         return c.text("Bad Request", 400);

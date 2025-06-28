@@ -4,19 +4,12 @@
   "description": "",
   "license": "MIT",
   "author": "Jérôme <jerome@meow-meow.dev>",
+  "sideEffects": false,
   "type": "module",
   "imports": {
-    "#auth": {
-      "types": "./src/auth/index.ts",
-      "default": "./src/auth/index.ts"
-    },
-    "#auth/*": {
-      "types": "./src/auth/*/index.ts",
-      "default": "./src/auth/*/index.ts"
-    },
-    "#cookie": {
-      "types": "./src/cookie/index.ts",
-      "default": "./src/cookie/index.ts"
+    "#constants/*": {
+      "types": "./src/constants/*/index.ts",
+      "default": "./src/constants/*/index.ts"
     },
     "#hono": {
       "types": "./src/hono/index.ts",
@@ -49,10 +42,6 @@
     "#neverthrow/*": {
       "types": "./src/neverthrow/*/index.ts",
       "default": "./src/neverthrow/*/index.ts"
-    },
-    "#oauth_providers": {
-      "types": "./src/oauth_providers/index.ts",
-      "default": "./src/oauth_providers/index.ts"
     },
     "#queries": {
       "types": "./src/queries/index.ts",
@@ -88,22 +77,10 @@
     }
   },
   "exports": {
-    "./auth": {
+    "./constants": {
       "import": {
-        "types": "./dist/auth/index.d.ts",
-        "default": "./dist/auth/index.mjs"
-      }
-    },
-    "./auth/*": {
-      "import": {
-        "types": "./dist/auth/*/index.d.ts",
-        "default": "./dist/auth/*/index.mjs"
-      }
-    },
-    "./cookie": {
-      "import": {
-        "types": "./dist/cookie/index.d.ts",
-        "default": "./dist/cookie/index.mjs"
+        "types": "./dist/constants/index.d.ts",
+        "default": "./dist/constants/index.mjs"
       }
     },
     "./hono": {
@@ -152,12 +129,6 @@
       "import": {
         "types": "./dist/neverthrow/*/index.d.ts",
         "default": "./dist/neverthrow/*/index.mjs"
-      }
-    },
-    "./oauth_providers": {
-      "import": {
-        "types": "./dist/oauth_providers/index.d.ts",
-        "default": "./dist/oauth_providers/index.mjs"
       }
     },
     "./queries": {
@@ -233,59 +204,55 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "luxon": "^3.6.1",
-    "nanoid": "^5.1.5"
-  },
   "devDependencies": {
-    "@commitlint/config-conventional": "^19.8.0",
-    "@eslint/js": "^9.25.1",
-    "@meow-meow-dev/shared-configs": "^1.6.0",
-    "@microsoft/api-extractor": "^7.52.5",
-    "@tanstack/eslint-plugin-query": "^5.74.7",
-    "@tanstack/eslint-plugin-router": "^1.115.0",
-    "@tsconfig/node22": "^22.0.1",
-    "@types/luxon": "^3.6.2",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.30.0",
+    "@meow-meow-dev/shared-configs": "^1.7.0",
+    "@microsoft/api-extractor": "^7.52.8",
+    "@tanstack/eslint-plugin-query": "^5.81.2",
+    "@tanstack/eslint-plugin-router": "^1.121.21",
+    "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.3",
-    "@typescript-eslint/parser": "^8.31.1",
-    "@vitest/coverage-istanbul": "^3.1.2",
-    "@vitest/eslint-plugin": "^1.1.43",
-    "@vitest/ui": "^3.1.2",
+    "@typescript-eslint/parser": "^8.35.0",
+    "@vitest/coverage-istanbul": "^3.2.4",
+    "@vitest/eslint-plugin": "^1.3.3",
+    "@vitest/ui": "^3.2.4",
     "clean-package": "^2.2.0",
     "commitizen": "^4.3.1",
-    "commitlint": "^19.8.0",
+    "commitlint": "^19.8.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.25.1",
-    "eslint-import-resolver-typescript": "^4.3.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^17.17.0",
+    "eslint": "^9.30.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.20.0",
     "eslint-plugin-no-relative-import-paths": "^1.6.1",
-    "eslint-plugin-package-json": "^0.31.0",
-    "eslint-plugin-perfectionist": "^4.12.3",
+    "eslint-plugin-package-json": "^0.42.0",
+    "eslint-plugin-perfectionist": "^4.15.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-tailwindcss": "^3.18.0",
-    "eslint-plugin-testing-library": "^7.1.1",
-    "eslint-plugin-unicorn": "^59.0.0",
+    "eslint-plugin-testing-library": "^7.5.3",
+    "eslint-plugin-unicorn": "^59.0.1",
     "husky": "^9.1.7",
     "kysely-plugin-serialize": "^0.8.2",
-    "lint-staged": "^15.5.1",
-    "prettier": "^3.5.3",
-    "tsup": "^8.4.0",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-sql": "^0.19.1",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.31.1",
+    "typescript-eslint": "^8.35.0",
     "vite": "^6.3.4",
-    "vitest": "^3.1.3",
+    "vitest": "^3.2.4",
     "wrangler": "^4.14.0"
   },
   "peerDependencies": {
-    "@hono/oauth-providers": "^0.6.2",
-    "@hono/valibot-validator": "^0.5.2",
-    "@noxharmonium/kysely-d1": "^0.4.0",
+    "@hono/standard-validator": "^0.1.2",
     "hono": "^4.7.1",
     "kysely": "^0.28.2",
+    "kysely-d1": "^0.4.0",
     "kysely-plugin-serialize": "^0.8.2",
     "neverthrow": "^8.1.1",
     "type-fest": "^4.34.1",

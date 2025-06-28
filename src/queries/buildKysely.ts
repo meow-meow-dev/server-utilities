@@ -1,8 +1,8 @@
 import type { LogConfig } from "kysely";
 import type { Deserializer, Serializer } from "kysely-plugin-serialize";
 
-import { D1Dialect } from "@noxharmonium/kysely-d1";
 import { CamelCasePlugin, Kysely } from "kysely";
+import { D1Dialect } from "kysely-d1";
 import { BaseSerializePlugin, dateRegex } from "kysely-plugin-serialize";
 
 export type BuildKyselyProps = {
