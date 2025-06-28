@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/meow-meow-dev/server-utilities/compare/v4.2.0...v4.3.0) (2025-06-28)
+
+
+### Features
+
+* remove auth & bump packages ([2f89d7a](https://github.com/meow-meow-dev/server-utilities/commit/2f89d7a3416e40475e7c0c9ad2d5ba5f09bd2294))
+
 ## [4.2.0](https://github.com/meow-meow-dev/server-utilities/compare/v4.1.0...v4.2.0) (2025-06-09)
 
 
