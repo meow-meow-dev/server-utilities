@@ -6,7 +6,7 @@ import {
   ok,
   unauthorized,
 } from "#http/status";
-import { vValidator } from "#validation";
+import { sValidator } from "#validation";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import * as v from "valibot";
@@ -32,7 +32,7 @@ const app = new Hono()
   })
   .get(
     "/json",
-    vValidator(
+    sValidator(
       "query",
       v.object({
         status: v.pipe(

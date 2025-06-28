@@ -1,5 +1,5 @@
-import { D1Dialect } from "@noxharmonium/kysely-d1";
 import { CamelCasePlugin, Kysely } from "kysely";
+import { D1Dialect } from "kysely-d1";
 
 export type Env = {
   DB: D1Database;

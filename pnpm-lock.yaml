@@ -8,24 +8,18 @@ importers:
 
   .:
     dependencies:
-      '@hono/oauth-providers':
-        specifier: ^0.6.2
-        version: 0.6.2(hono@4.7.11)
-      '@hono/valibot-validator':
-        specifier: ^0.5.2
-        version: 0.5.2(hono@4.7.11)(valibot@1.0.0-rc.0(typescript@5.8.3))
-      '@noxharmonium/kysely-d1':
-        specifier: ^0.4.0
-        version: 0.4.0(kysely@0.28.2)
+      '@hono/standard-validator':
+        specifier: ^0.1.2
+        version: 0.1.2(@standard-schema/spec@1.0.0)(hono@4.7.11)
       hono:
         specifier: ^4.7.1
         version: 4.7.11
       kysely:
         specifier: ^0.28.2
         version: 0.28.2
-      luxon:
-        specifier: ^3.6.1
-        version: 3.6.1
+      kysely-d1:
+        specifier: ^0.4.0
+        version: 0.4.0(kysely@0.28.2)
       nanoid:
         specifier: ^5.1.5
         version: 5.1.5
@@ -60,9 +54,6 @@ importers:
       '@tsconfig/node22':
         specifier: ^22.0.1
         version: 22.0.1
-      '@types/luxon':
-        specifier: ^3.6.2
-        version: 3.6.2
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.3
@@ -878,17 +869,11 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@hono/oauth-providers@0.6.2':
-    resolution: {integrity: sha512-Uo2Lf+GnaPGebkC4GUQMRD9spIKonav/gWwSapEJhCKQjq1WVxTLIlCykNRhJtcizPCPc6OAV3A9RAYk0kX9XQ==}
-    engines: {node: '>=18.4.0'}
+  '@hono/standard-validator@0.1.2':
+    resolution: {integrity: sha512-mVyv2fpx/o0MNAEhjXhvuVbW3BWTGnf8F4w8ZifztE+TWXjUAKr7KAOZfcDhVrurgVhKw7RbTnEog2beZM6QtQ==}
     peerDependencies:
-      hono: '>=3.*'
-
-  '@hono/valibot-validator@0.5.2':
-    resolution: {integrity: sha512-WbTr8PCFNAME0ale62rmmq+E8bGp5a7VPiVNmNT+Ue12GJE3Ax+CWBGtHhR0TzAEiloPvJND3IbjHIgtNtsqhw==}
-    peerDependencies:
+      '@standard-schema/spec': 1.0.0
       hono: '>=3.9.0'
-      valibot: ^1.0.0 || ^1.0.0-beta.4 || ^1.0.0-rc
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1075,11 +1060,6 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
-
-  '@noxharmonium/kysely-d1@0.4.0':
-    resolution: {integrity: sha512-811W031TSUMfqnk0zgbiic2Kyq9yqF/Sf4sFsyPInz1NPdLgvbfrDLgtU9MLeEOLMyPtRJzVr4Kyf3FDQc4ffQ==}
-    peerDependencies:
-      kysely: '*'
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1308,6 +1288,9 @@ packages:
   '@rushstack/ts-command-line@5.0.0':
     resolution: {integrity: sha512-SW6nqZVxH26Rxz25+lJQRlnXI/YCrNH7NfDEWPPm9i0rwkSE6Rgtmzw96cuZgQjacOh0sw77d6V4SvgarAfr8g==}
 
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
+
   '@tanstack/eslint-plugin-query@5.74.7':
     resolution: {integrity: sha512-EeHuaaYiCOD+XOGyB7LMNEx9OEByAa5lkgP+S3ZggjKJpmIO6iRWeoIYYDKo2F8uc3qXcVhTfC7pn7NddQiNtA==}
     peerDependencies:
@@ -1341,9 +1324,6 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
-
-  '@types/luxon@3.6.2':
-    resolution: {integrity: sha512-R/BdP7OxEMc44l2Ex5lSXHoIXTB2JLNa3y2QISIbr58U/YcsffyQrYW//hZSdrfxrjRZj3GcUoxMPGdO8gSYuw==}
 
   '@types/node@22.15.3':
     resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
@@ -2963,6 +2943,11 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
+  kysely-d1@0.4.0:
+    resolution: {integrity: sha512-wUcVvQNtm30OTfuo7Ad5vYJ1qHqPXOCZc+zWchVKNyuvqY3u8OuGw4gmUx1Ypdx2wRVFLHVQC9I7v0pTmF7Nkw==}
+    peerDependencies:
+      kysely: '*'
+
   kysely-plugin-serialize@0.8.2:
     resolution: {integrity: sha512-81nyTvDPGNHTzs9/Si+GW69YkcQgy2PMlkCieihEyF9EmlGY/TURUZMhVRrLV1k3Hsit+AWCfoEOLJczbK3hDw==}
     peerDependencies:
@@ -3068,10 +3053,6 @@ packages:
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
-
-  luxon@3.6.1:
-    resolution: {integrity: sha512-tJLxrKJhO2ukZ5z0gyjY1zPh3Rh88Ej9P7jNrZiHMUXHae1yvI2imgOZtL1TO8TW6biMMKfTtAOoEJANgtWBMQ==}
-    engines: {node: '>=12'}
 
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
@@ -4772,14 +4753,10 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/oauth-providers@0.6.2(hono@4.7.11)':
+  '@hono/standard-validator@0.1.2(@standard-schema/spec@1.0.0)(hono@4.7.11)':
     dependencies:
+      '@standard-schema/spec': 1.0.0
       hono: 4.7.11
-
-  '@hono/valibot-validator@0.5.2(hono@4.7.11)(valibot@1.0.0-rc.0(typescript@5.8.3))':
-    dependencies:
-      hono: 4.7.11
-      valibot: 1.0.0-rc.0(typescript@5.8.3)
 
   '@humanfs/core@0.19.1': {}
 
@@ -4963,10 +4940,6 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
-  '@noxharmonium/kysely-d1@0.4.0(kysely@0.28.2)':
-    dependencies:
-      kysely: 0.28.2
-
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -5125,6 +5098,8 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
+  '@standard-schema/spec@1.0.0': {}
+
   '@tanstack/eslint-plugin-query@5.74.7(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/utils': 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
@@ -5161,8 +5136,6 @@ snapshots:
   '@types/json-schema@7.0.15': {}
 
   '@types/json5@0.0.29': {}
-
-  '@types/luxon@3.6.2': {}
 
   '@types/node@22.15.3':
     dependencies:
@@ -7071,6 +7044,10 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
+  kysely-d1@0.4.0(kysely@0.28.2):
+    dependencies:
+      kysely: 0.28.2
+
   kysely-plugin-serialize@0.8.2(kysely@0.28.2):
     dependencies:
       kysely: 0.28.2
@@ -7174,8 +7151,6 @@ snapshots:
   lru-cache@6.0.0:
     dependencies:
       yallist: 4.0.0
-
-  luxon@3.6.1: {}
 
   magic-string@0.30.17:
     dependencies:
