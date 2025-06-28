@@ -4,19 +4,12 @@
   "description": "",
   "license": "MIT",
   "author": "Jérôme <jerome@meow-meow.dev>",
+  "sideEffects": false,
   "type": "module",
   "imports": {
-    "#auth": {
-      "types": "./src/auth/index.ts",
-      "default": "./src/auth/index.ts"
-    },
-    "#auth/*": {
-      "types": "./src/auth/*/index.ts",
-      "default": "./src/auth/*/index.ts"
-    },
-    "#cookie": {
-      "types": "./src/cookie/index.ts",
-      "default": "./src/cookie/index.ts"
+    "#constants/*": {
+      "types": "./src/constants/*/index.ts",
+      "default": "./src/constants/*/index.ts"
     },
     "#hono": {
       "types": "./src/hono/index.ts",
@@ -49,10 +42,6 @@
     "#neverthrow/*": {
       "types": "./src/neverthrow/*/index.ts",
       "default": "./src/neverthrow/*/index.ts"
-    },
-    "#oauth_providers": {
-      "types": "./src/oauth_providers/index.ts",
-      "default": "./src/oauth_providers/index.ts"
     },
     "#queries": {
       "types": "./src/queries/index.ts",
@@ -88,22 +77,10 @@
     }
   },
   "exports": {
-    "./auth": {
+    "./constants": {
       "import": {
-        "types": "./dist/auth/index.d.ts",
-        "default": "./dist/auth/index.mjs"
-      }
-    },
-    "./auth/*": {
-      "import": {
-        "types": "./dist/auth/*/index.d.ts",
-        "default": "./dist/auth/*/index.mjs"
-      }
-    },
-    "./cookie": {
-      "import": {
-        "types": "./dist/cookie/index.d.ts",
-        "default": "./dist/cookie/index.mjs"
+        "types": "./dist/constants/index.d.ts",
+        "default": "./dist/constants/index.mjs"
       }
     },
     "./hono": {
@@ -152,12 +129,6 @@
       "import": {
         "types": "./dist/neverthrow/*/index.d.ts",
         "default": "./dist/neverthrow/*/index.mjs"
-      }
-    },
-    "./oauth_providers": {
-      "import": {
-        "types": "./dist/oauth_providers/index.d.ts",
-        "default": "./dist/oauth_providers/index.mjs"
       }
     },
     "./queries": {
@@ -234,7 +205,6 @@
     }
   },
   "dependencies": {
-    "luxon": "^3.6.1",
     "nanoid": "^5.1.5"
   },
   "devDependencies": {
@@ -245,7 +215,6 @@
     "@tanstack/eslint-plugin-query": "^5.74.7",
     "@tanstack/eslint-plugin-router": "^1.115.0",
     "@tsconfig/node22": "^22.0.1",
-    "@types/luxon": "^3.6.2",
     "@types/node": "^22.15.3",
     "@typescript-eslint/parser": "^8.31.1",
     "@vitest/coverage-istanbul": "^3.1.2",
@@ -281,11 +250,10 @@
     "wrangler": "^4.14.0"
   },
   "peerDependencies": {
-    "@hono/oauth-providers": "^0.6.2",
     "@hono/valibot-validator": "^0.5.2",
-    "@noxharmonium/kysely-d1": "^0.4.0",
     "hono": "^4.7.1",
     "kysely": "^0.28.2",
+    "kysely-d1": "^0.4.0",
     "kysely-plugin-serialize": "^0.8.2",
     "neverthrow": "^8.1.1",
     "type-fest": "^4.34.1",
